@@ -1,0 +1,42 @@
+.info-product-quality {
+	display            : flex;
+	align-items        : center;
+	height             : 415px;
+	background-image   : url(../img/about/bg-info-product-quanlity.png);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center center;
+
+	.list-item {
+		display        : flex;
+		justify-content: space-between;
+		width          : 1365px;
+		margin         : 0 auto;
+
+		.item {
+			figure {
+				display    : flex;
+				align-items: center;
+
+				figcaption {
+					padding-left: 25px;
+
+					span,
+					h5 {
+						color      : #ffffff;
+						font-weight: 700;
+					}
+
+					span {
+						font-size: 18px;
+					}
+
+					h5 {
+						font-size  : 42px;
+						line-height: 40px;
+					}
+				}
+			}
+		}
+	}
+}
