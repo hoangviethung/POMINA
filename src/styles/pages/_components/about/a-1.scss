@@ -1,0 +1,34 @@
+.home-about {
+	padding   : 35px 0;
+	background: $main-color-1;
+
+	.col-lg-3 {
+		figure {
+			position: relative;
+			overflow: hidden;
+
+			&:after {
+				position        : absolute;
+				top             : 0;
+				right           : 10px;
+				transform       : rotate(-30deg);
+				transform-origin: 100% 100%;
+				background      : #fff;
+				width           : 100%;
+				height          : 1px;
+				content         : "";
+			}
+		}
+	}
+}
+
+.col-lg-7 {
+	p {
+		font-size: 18px;
+		color    : #FFFFFF;
+	}
+}
+
+.col-lg-2 {
+	align-self: center;
+}

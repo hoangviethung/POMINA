@@ -1,0 +1,92 @@
+.home-banner {
+	.slider-HomeBanner {
+		figure {
+			position: relative;
+			height  : 800px;
+
+			// figcaption {
+			// }
+
+			// &:after {
+			// 	content : '';
+			// 	position: absolute;
+			// 	left    : 0;
+			// 	top     : 0;
+			// 	width   : 100%;
+			// 	height  : 100%;
+
+			// 	background: rgb(255, 255, 255);
+			// 	background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.700717787114846) 15%, rgba(255, 255, 255, 0.39539565826330536) 30%, rgba(255, 255, 255, 0) 40%);
+			// }
+		}
+	}
+
+	// SET HIỆU ỨNG CHO SLIDER
+	.swiper-container {
+		.swiper-slide {
+			figure {
+				img {
+					transition      : 1s all ease-in-out;
+					transition-delay: 1s;
+				}
+			}
+
+			&.swiper-slide-active {
+				figure {
+					img {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			background-size  : cover;
+			width            : 80px;
+			height           : 80px;
+			background-repeat: no-repeat;
+			z-index          : 1;
+			transition       : .3s all ease-in-out;
+		}
+
+		.swiper-button-next {
+			background-image: url(../img/icons/next-home-banner.svg);
+		}
+
+		.swiper-button-prev {
+			background-image: url(../img/icons/prev-home-banner.svg);
+		}
+	}
+
+	// @media (max-width: 1024.98px) {
+	// 	.slider-HomeBanner {
+	// 		figure {
+	// 			position: relative;
+	// 			height  : auto;
+	// 		}
+	// 	}
+	// }
+
+	// @media (max-width: 767.98px) {
+
+	// 	// SET HIỆU ỨNG CHO SLIDER
+	// 	.swiper-container {
+	// 		.swiper-button-next {
+	// 			background-size: 15px;
+	// 			right          : -25px;
+	// 			width          : 44px;
+	// 			height         : 44px;
+
+	// 		}
+
+	// 		.swiper-button-prev {
+	// 			background-size    : 15px;
+	// 			background-position: 25px;
+	// 			left               : -25px;
+	// 			width              : 44px;
+	// 			height             : 44px;
+	// 		}
+	// 	}
+	// }
+}

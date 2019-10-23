@@ -61,6 +61,7 @@ class Tab {
 	}
 }
 
+// ACTIVE MENU BY URL
 function activeHeader() {
 	if ($(window) > 1024) {
 		$(this).scroll(function() {
@@ -71,6 +72,28 @@ function activeHeader() {
 			}
 		});
 	}
+}
+
+// HOME SLIDER
+function sliderHomeBanner() {
+	var swpier = new Swiper('.slider-HomeBanner', {
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true,
+		},
+		centeredSlides: true,
+		speed: 1000,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {},
+		navigation: {
+			nextEl: '.slider-HomeBanner .swiper-button-next',
+			prevEl: '.slider-HomeBanner .swiper-button-prev',
+		},
+	});
 }
 
 // GET THUMBNAIL YOUTUBE
@@ -84,6 +107,7 @@ function _getThumbnailYoutube() {
 	})
 }
 
+// FAQ
 function showFAQ() {
 	$('.FAQ .item-group .question').click(function(e) {
 		e.preventDefault();
@@ -94,14 +118,16 @@ function showFAQ() {
 }
 
 
+
 $(document).ready(function() {
+	new WOW().init();
 	objectFitImages("img.ofc");
-	showBackToTop();
-	activeMenuByUrl();
+	_getThumbnailYoutube();
+
+	sliderHomeBanner();
+
 	activeHeader();
 	showFAQ();
-	_getThumbnailYoutube();
-	new WOW().init();
 })
 
 $(window).on("scroll", function() {
