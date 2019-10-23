@@ -1,0 +1,22 @@
+.home-list-product {
+	padding-top        : 115px;
+	background-image   : url(../img/home-products-bg.png);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center center;
+
+	.list-product {
+		max-width: 1365px;
+		width    : 100%;
+		margin   : 50px auto 0;
+
+		.row {
+			justify-content: center;
+			margin         : 0 -40px;
+
+			.col-lg-4.col-md-6 {
+				padding: 0 40px;
+			}
+		}
+	}
+}

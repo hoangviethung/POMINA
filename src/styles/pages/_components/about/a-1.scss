@@ -20,15 +20,20 @@
 			}
 		}
 	}
-}
 
-.col-lg-7 {
-	p {
-		font-size: 18px;
-		color    : #FFFFFF;
+	.col-lg-7 {
+		p {
+			font-size: 18px;
+			color    : #FFFFFF;
+		}
 	}
-}
 
-.col-lg-2 {
-	align-self: center;
+	.col-lg-2 {
+		align-self: center;
+
+		.btn {
+			line-height: 55px;
+			width      : 180px;
+		}
+	}
 }

@@ -61,17 +61,70 @@ class Tab {
 	}
 }
 
-// ACTIVE MENU BY URL
+// ACTIVE HEADER WHEN SCROLL
 function activeHeader() {
-	if ($(window) > 1024) {
-		$(this).scroll(function() {
-			if ($(this).scrollTop() > 150) {
-				$('header').addClass('active');
-			} else {
-				$('header').removeClass('active');
-			}
-		});
-	}
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 150) {
+			$('header').addClass('active');
+		} else {
+			$('header').removeClass('active');
+		}
+	});
+}
+
+// ACTIVE ITEM MENU BY URL
+function activeMenuByUrl() {
+	var url = window.location.href.split('/').pop();
+
+	let listNavItem = $('.bottom-header .nav-list .nav-item a');
+	listNavItem.each(function() {
+		let hung = $(this).attr('href');
+		if (url.includes(hung)) {
+			$(this).parents('.nav-item').addClass('active');
+		}
+	})
+}
+
+// SHOW MENU IN MOBILE
+function showMenuMobile() {
+	$('.toggle-menu-mobile').click(function(e) {
+		e.preventDefault();
+		$(this).siblings('.search-mobile').find('.search').removeClass('active');
+		$(this).siblings('.search-mobile').find('.close').removeClass('active');
+
+		$('.top-header').removeClass('active');
+		$('.bottom-header').toggleClass('active');
+	});
+}
+
+// SHOW SEARCH MOBILE
+function showSearchMobile() {
+	$('.search-mobile').click(function(e) {
+		e.preventDefault();
+		$(this).find('.search').toggleClass('active');
+		$(this).find('.close').toggleClass('active');
+
+		$('.bottom-header').removeClass('active');
+		$('.top-header').toggleClass('active');
+	});
+}
+
+// SHOW BACK TO TOP
+function showBackToTop() {
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 800) {
+			$('#back-to-top').addClass('active');
+		} else {
+			$('#back-to-top').removeClass('active');
+		}
+	});
+
+	$("#back-to-top").on("click", function(e) {
+		e.preventDefault();
+		$("html,body").animate({
+			scrollTop: 0
+		})
+	})
 }
 
 // HOME SLIDER
@@ -123,9 +176,10 @@ $(document).ready(function() {
 	new WOW().init();
 	objectFitImages("img.ofc");
 	_getThumbnailYoutube();
-
+	showBackToTop();
+	showSearchMobile();
+	showMenuMobile();
 	sliderHomeBanner();
-
 	activeHeader();
 	showFAQ();
 })
