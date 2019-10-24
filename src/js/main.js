@@ -170,11 +170,17 @@ function showFAQ() {
 	});
 }
 
-
+function typeIt() {
+	new TypeIt('.typeit', {
+		speed: 200,
+		waitUntilVisible: true,
+	}).go();
+}
 
 $(document).ready(function() {
 	new WOW().init();
 	objectFitImages("img.ofc");
+	activeMenuByUrl();
 	_getThumbnailYoutube();
 	showBackToTop();
 	showSearchMobile();
@@ -182,8 +188,5 @@ $(document).ready(function() {
 	sliderHomeBanner();
 	activeHeader();
 	showFAQ();
-})
-
-$(window).on("scroll", function() {
-	// Scroll
+	typeIt();
 })
