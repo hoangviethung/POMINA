@@ -30,19 +30,16 @@ html(lang="en")
 		//- main content
 		block header
 			include _header.pug
-
 		main
 			block main
-
 		block footer
 			include _footer.pug
 		//- end main content
 		include _back-to-top.pug
-		//- include scripts
 		//- GOOGLE MAP
 		script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCHvmyTralDp2Y0m7zEiN185u1vtArcC5s&libraries=places")
 		//- FACEBOOK
-		//- script(type="text/javascript", src='https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3') 
+		script(async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=774359209430335&autoLogAppEvents=1")
 		script(type="text/javascript", src="./js/map.js")
 		script(type="text/javascript", src="./js/core.min.js")
 		script(type="text/javascript", src="./js/main.min.js")

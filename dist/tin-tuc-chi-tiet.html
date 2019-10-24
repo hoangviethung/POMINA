@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>POMINA | Tin Tức Chi Tiết</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<style>#loading{-webkit-transition:.8s;-o-transition:.8s;position:fixed;top:0;right:0;bottom:0;left:0;z-index:99999;transition:.8s;background:#fff;width:100%;height:100%}#loading #progress{-webkit-transition:.8s;-o-transition:.8s;display:none;transition:.8s;background:#000;width:0;height:1px}#loading #progress,#loading .progstat-wrapper{-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);position:absolute;top:50%;transform:translateY(-50%)}#loading .progstat-wrapper{margin-top:0;width:100%;color:#000;font-size:14px;font-weight:300;letter-spacing:3px;text-align:center}#loading .logo-loader{-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:350px}</style>
+		<script>!function(){function n(n){return document.getElementById(n)}document.addEventListener("DOMContentLoaded",function(){var e=n("loading"),t=n("progress"),o=n("progstat"),r=document.images,i=0,d=r.length;if(0==d)return u();function a(){var n=100/d*(i+=1)<<0;if(t.style.width=n,o.innerHTML=n,i===d)return u()}function u(){e.style.opacity=0,setTimeout(function(){e.style.display="none";var n=document.getElementById("loading");n.parentNode.removeChild(n)},1500)}for(var c=0;c<d;c++){var s=new Image;s.onload=a,s.onerror=a,s.src=r[c].src}},!1)}();</script>
+		<link rel="stylesheet" href="./css/core.min.css">
+		<link rel="stylesheet" href="./css/main.min.css"><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap&subset=vietnamese" rel="stylesheet">
+	</head>
+	<body>
+		<div id="loading">
+			<div class="logo-loader"><img src="./img/loading.svg" alt=""></div>
+			<div class="progstat-wrapper">Loading: <span id="progstat">0</span>%</div>
+			<div id="progress"></div>
+		</div>
+		<div id="fb-root"></div>
+		<header>
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-lg-auto">
+						<div class="toggle-menu-mobile"><img src="./img/icons/menu-mobile.svg" alt=""></div>
+						<div class="logo"><a href="index.html"><img src="./img/logo.png" alt="" srcset=""></a></div>
+						<div class="search-mobile"><img class="search" src="./img/icons/search-mobile.svg" alt=""><img class="close" src="./img/icons/close.svg" alt=""></div>
+					</div>
+					<div class="col-no-rel">
+						<div class="top-header">
+							<ul class="social-media-menu">
+								<div class="item"><a href="#"><img src="./img/icons/pinterest.svg" alt="" srcset=""></a></div>
+								<div class="item"><a href="#"><img src="./img/icons/facebook.svg" alt="" srcset=""></a></div>
+								<div class="item"><a href="#"><img src="./img/icons/twitter.svg" alt="" srcset=""></a></div>
+							</ul>
+							<div class="search">
+								<form action="#">
+									<input type="text" placeholder="Tìm kiếm">
+									<button><img src="./img/icons/search.svg" alt="" srcset=""></button>
+								</form>
+							</div>
+						</div>
+						<div class="bottom-header">
+							<div class="nav-list">
+								<div class="nav-item"><a href="gioi-thieu.html">GIỚI THIỆU</a></div>
+								<div class="nav-item"><a href="san-pham.html">SẢN PHẨM</a></div>
+								<div class="nav-item"><a href="tin-tuc.html">TIN TỨC</a></div>
+								<div class="nav-item"><a href="tuyen-dung.html">TUYỂN DỤNG</a></div>
+								<div class="nav-item"><a href="lien-he.html">LIÊN HỆ</a></div>
+								<div class="nav-item">
+									<select name="">
+										<option value="">EN</option>
+										<option value="">VN</option>
+										<option value="">TQ</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<h1>TRANG TIN TỨC CHI TIẾT</h1>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2">
+						<div class="logo"><a href="index.html"><img src="./img/logo-white.png" alt=""></a></div>
+					</div>
+					<div class="col-lg-4">
+						<div class="title-footer">LIÊN HỆ</div>
+						<ul class="list-contact">
+							<li class="item"><img src="./img/icons/address.svg" alt="" srcset="">
+								<p>Khu công nghiệp Phú Mỹ 1, thị trấn Phú Mỹ,<br>tỉnh Bà Rịa - Vũng Tàu, Việt Nam</p>
+							</li>
+							<li class="item"><img src="./img/icons/phone.svg" alt="">
+								<p>(+84) (254) 3895 118</p>
+							</li>
+							<li class="item"><img src="./img/icons/gmail.svg" alt="">
+								<p>KD Nội đia: kinhdoanh@pomina-flat-steel.com/ Export<br>Sales Department: binh.le@pomina-flat-steel.com</p>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3">
+						<div class="title-footer">SẢN PHẨM</div>
+						<ul class="list-product">
+							<li class="item"><a href="#">Tôn lạnh AZ70/ AZ100</a></li>
+							<li class="item"><a href="#">Tôn lạnh Shield Viet AZ150</a></li>
+							<li class="item"><a href="#">Tôn lạnh màu AZ50</a></li>
+							<li class="item"><a href="#">Tôn lạnh màu Solar AZ100</a></li>
+							<li class="item"><a href="#">Tôn lạnh màu Shield Viet AZ150</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3">
+						<div class="title-footer">FACEBOOK</div>
+						<div class="fb-page" data-href="https://www.facebook.com/Web4G.Solution/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+							<blockquote class="fb-xfbml-parse-ignore" cite="https://www.facebook.com/Web4G.Solution/"><a href="https://www.facebook.com/Web4G.Solution/">Web4G Solutions</a></blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="copyright">
+			<div class="container">
+				<div class="content"><span>© Bản quyền thuộc về CÔNG TY TNHH TÔN POMINA. Designed by Web4G Solutions</span><span>Điều Kiện, Điều Khoản | Bảo Mật</span></div>
+			</div>
+		</div>
+		<div id="back-to-top">
+			<figure><img src="./img/icons/back-to-top.svg" alt="" srcset=""></figure>
+		</div>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&amp;key=AIzaSyCHvmyTralDp2Y0m7zEiN185u1vtArcC5s&amp;libraries=places"></script>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v4.0&amp;appId=774359209430335&amp;autoLogAppEvents=1"></script>
+		<script type="text/javascript" src="./js/map.js"></script>
+		<script type="text/javascript" src="./js/core.min.js"></script>
+		<script type="text/javascript" src="./js/main.min.js"></script>
+	</body>
+</html>

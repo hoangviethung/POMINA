@@ -54,13 +54,11 @@ main {
 		box-shadow: none;
 	}
 
-	&:hover {
-		background: $main-color-2;
-		color     : #FFFFFF;
-	}
-
-	@media (max-width: 767.98px) {
-		width: 190px;
+	@media (min-width: 1440px) {
+		&:hover {
+			background: $main-color-2;
+			color     : #FFFFFF;
+		}
 	}
 }
 
@@ -79,6 +77,13 @@ main {
 	}
 }
 
+.home-google-map {
+	#map {
+		width : 100%;
+		height: 625px;
+	}
+}
+
 .home-product-item {
 	margin-bottom: 80px;
 
@@ -90,6 +95,7 @@ main {
 
 		.box-img {
 			position: relative;
+			height  : 100%;
 
 			img {
 				&:last-child {
@@ -142,28 +148,114 @@ main {
 			transition: .5s all ease-in-out;
 		}
 
-		&:hover {
-			.box-img {
-				img {
-					&:last-child {
-						opacity: 0;
+		@media (min-width: 1440px) {
+			&:hover {
+				.box-img {
+					img {
+						&:last-child {
+							opacity: 0;
+						}
 					}
 				}
-			}
 
-			figcaption {
-				left: 50%;
-			}
+				figcaption {
+					left: 50%;
+				}
 
-			&:after {
-				right: 0;
+				&:after {
+					right: 0;
+				}
 			}
 		}
 	}
 }
 
 .home-news-item {
-	.box-img {
-		height: 370px;
+	flex     : 0 0 50%;
+	max-width: 50%;
+	padding  : 0 40px;
+
+	figure {
+		.box-img {
+			position: relative;
+			height  : 370px;
+			overflow: hidden;
+
+			img {
+				transition: 1s all ease-in-out;
+			}
+
+			.date {
+				position     : absolute;
+				left         : 40px;
+				top          : 40px;
+				padding      : 10px;
+				border-radius: 10px;
+				color        : #FFFFFF;
+				background   : $main-color-2;
+
+				h5 {
+					font-size: 40px;
+				}
+
+				span {
+					font-size: 24px;
+				}
+			}
+		}
+
+		figcaption {
+			padding   : 35px;
+			background: #FFFFFF;
+			box-shadow: 0px 9px 15px rgba($color: #000000, $alpha: .16);
+
+			.desc {
+				padding-bottom: 40px;
+				position      : relative;
+
+				&:after {
+					content   : '';
+					position  : absolute;
+					left      : 0;
+					bottom    : 0;
+					width     : 100%;
+					height    : 1px;
+					background: #dedede;
+				}
+
+				p {
+					height            : 62px;
+					font-size         : 21px;
+					font-weight       : 700;
+					color             : #434343;
+					-webkit-line-clamp: 2;
+				}
+			}
+
+			.bottom {
+				margin-top     : 30px;
+				display        : flex;
+				justify-content: space-between;
+				font-size      : 17px;
+
+				span {
+					color: #9B9B9B;
+				}
+
+				a {
+					color: #124E91;
+				}
+			}
+		}
+
+		@media (min-width: 1440px) {
+			&:hover {
+				.box-img {
+					img {
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
 	}
 }

@@ -1,0 +1,60 @@
+footer {
+	padding   : 75px 0;
+	background: $main-color-1;
+
+	.title-footer {
+		color         : #FFFFFF;
+		font-size     : 17px;
+		padding-bottom: 25px;
+	}
+
+	.list-contact {
+		.item {
+			display      : flex;
+			margin-bottom: 15px;
+
+			p {
+				padding-left: 25px;
+				color       : #A8BBD1;
+			}
+		}
+	}
+
+	.list-product {
+		.item {
+			position     : relative;
+			margin-bottom: 15px;
+			padding-left : 15px;
+
+			&:after {
+				content      : '';
+				position     : absolute;
+				left         : 0;
+				top          : 50%;
+				transform    : translateY(-50%);
+				width        : 4px;
+				height       : 4px;
+				border-radius: 50%;
+				background   : #FFFFFF;
+			}
+
+			a {
+				color: #A8BBD1;
+			}
+		}
+	}
+}
+
+.copyright {
+	padding   : 15px 0;
+	background: #003C80;
+
+	.content {
+		display        : flex;
+		justify-content: space-between;
+
+		span {
+			color: rgba(168, 187, 209, 0.4);
+		}
+	}
+}
