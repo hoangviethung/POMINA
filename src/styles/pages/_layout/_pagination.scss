@@ -33,7 +33,7 @@
 		&:hover {
 			a {
 				color     : #FFFFFF;
-				background: #3E4095;
+				background: $main-color-1;
 			}
 		}
 
@@ -44,7 +44,7 @@
 		&.active {
 			a {
 				color          : #FFFFFF;
-				background     : #3E4095;
+				background     : $main-color-1;
 				text-decoration: underline;
 			}
 		}

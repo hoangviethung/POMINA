@@ -1,2 +1,21 @@
-seciton.list-news
-	h1 news
+section.list-news
+	.container
+		.row
+			.col-lg-12
+				-for(i=1;i<9;i++)
+					.item-news
+						figure
+							.box-img
+								img.ofc(src="./img/news/"+i+".png", alt="", srcset="")
+								.date
+									h5 26
+									span TH8
+							figcaption
+								.box-content
+									h3.limit-line THÉP POMINA (POM): NĂM 2017 ĐẠT MỨC LÃI SAU THUẾ KỶ LỤC GẦN 700 TỶ ĐỒNG
+									hr
+									p.limit-line Tính riêng quý 4 doanh thu thuần đạt 3.038 tỷ đồng, tăng hơn 5% so với cùng kỳ, trong đó doanh thu thép tiêu thụ nội địa đạt 2.262 tỷ đồng, chiếm 74,5% tổng doanh thu và ...
+									.bottom
+										span By Pomina
+										a(href="tin-tuc-chi-tiet.html") Xem thêm
+		include ../../_layout/_pagination.pug
