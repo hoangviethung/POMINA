@@ -1,22 +1,30 @@
 #breadcrumb-wrapper {
+	padding-top: 65px;
+
+	h1 {
+		font-size  : 42px;
+		color      : #434343;
+		font-weight: 700;
+		text-align : center;
+	}
+
 	.breadcrumb {
-		list-style   : none;
-		display      : flex;
-		padding      : 0;
-		border-top   : 1px dotted #707070;
-		border-bottom: 1px dotted #707070;
+		list-style     : none;
+		display        : flex;
+		justify-content: center;
+		padding        : 0;
 
 		li {
 			a {
-				color    : #707070;
-				font-size: 16px;
-				display  : inline-block;
-				padding  : 20px 0;
+				color      : #707070;
+				font-size  : 16px;
+				display    : inline-block;
+				padding-top: 20px;
 			}
 
 			&.active {
 				a {
-					color: #3E4095;
+					color: $main-color-1;
 				}
 			}
 

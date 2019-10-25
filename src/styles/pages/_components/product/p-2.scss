@@ -1,0 +1,28 @@
+.product-page {
+	margin-bottom: 55px;
+
+	.filter {
+		padding        : 45px 0;
+		justify-content: flex-end;
+	}
+
+	.list-item {
+		display  : flex;
+		flex-wrap: wrap;
+		margin   : 0 -7.5px;
+
+		.item {
+			flex     : 0 0 33.3333333333%;
+			max-width: 33.3333333333;
+			padding  : 0 7.5px;
+
+			.item-product {
+				margin-bottom: 15px;
+
+				figure {
+					height: 570px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+section.product-page
+	.container
+		.filter
+			h5 SẮP XẾP THEO
+			.form-group
+				select(name="#")
+					option(value="") Mặc định
+					option(value="") A - Z
+					option(value="") Z - A
+					option(value="") G - C
+					option(value="") A - Q
+					option(value="") 0 - 9
+					option(value="") I - U
+					option(value="") U - I
+		.list-item
+			-for(i=1;i<7;i++)
+				.item
+					.item-product.mb-80.wow.fadeInRight(data-wow-delay=".2s")
+						figure
+							.box-img
+								img.ofc(src="./img/products/"+i+".png", alt="", srcset="")
+								.name-product
+									p TÔN LẠNH SHEILD VIET AZ150
+							figcaption
+								h5 TÔN LẠNH MÀU
+								h5 AZ100
+								a(href="san-pham.html").btn.no-box-shadow XEM CHI TIẾT

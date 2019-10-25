@@ -62,6 +62,50 @@ main {
 	}
 }
 
+
+.filter {
+	display    : flex;
+	align-items: center;
+
+	h5 {
+		font-size   : 21px;
+		color       : #000000;
+		margin-right: 20px;
+	}
+
+	.form-group {
+		position: relative;
+
+		select {
+			cursor       : pointer;
+			font-size    : 18px;
+			color        : #777777;
+			background   : #F9F9F9;
+			width        : 335px;
+			height       : 40px;
+			font-style   : italic;
+			border-radius: 5px;
+			border       : none;
+			padding      : 0 50px 0 25px;
+			appearance   : none;
+		}
+
+		&:after {
+			content          : '';
+			background-image : url(../img/icons/arrow-select-red.svg);
+			position         : absolute;
+			right            : 15px;
+			top              : 50%;
+			transform        : translateY(-50%);
+			width            : 12px;
+			height           : 7px;
+			background-repeat: no-repeat;
+			background-size  : cover;
+		}
+	}
+
+}
+
 .title {
 	text-align    : center;
 	letter-spacing: 3px;
@@ -84,25 +128,34 @@ main {
 	}
 }
 
-.home-product-item {
-	margin-bottom: 80px;
-
+.item-product {
 	figure {
 		cursor  : pointer;
 		position: relative;
-		height  : 423px;
 		overflow: hidden;
 
 		.box-img {
 			position: relative;
 			height  : 100%;
 
-			img {
-				&:last-child {
-					position  : absolute;
-					bottom    : 30px;
-					left      : 30px;
-					transition: .5s all ease-in-out;
+			.name-product {
+				transition: .5s all ease-in-out;
+
+				img {
+					position: absolute;
+					bottom  : 30px;
+					left    : 30px;
+				}
+
+				p {
+					position : absolute;
+					bottom   : 30px;
+					left     : 50%;
+					transform: translateX(-50%);
+
+					font-size  : 21px;
+					font-weight: 700;
+					color      : #FFFFFF;
 				}
 			}
 		}
@@ -151,10 +204,8 @@ main {
 		@media (min-width: 1440px) {
 			&:hover {
 				.box-img {
-					img {
-						&:last-child {
-							opacity: 0;
-						}
+					.name-product {
+						opacity: 0;
 					}
 				}
 
