@@ -127,6 +127,15 @@ function showBackToTop() {
 	})
 }
 
+// SHOW FULL CONTENT ABOUT
+function showMoreContentAbout() {
+	$('.content-about span').click(function(e) {
+		e.preventDefault();
+		console.log('OK');
+		$('.content-about .desc').toggleClass('show-more');
+	});
+}
+
 // HOME SLIDER
 function sliderHomeBanner() {
 	var swpier = new Swiper('.slider-HomeBanner', {
@@ -145,6 +154,79 @@ function sliderHomeBanner() {
 		navigation: {
 			nextEl: '.slider-HomeBanner .swiper-button-next',
 			prevEl: '.slider-HomeBanner .swiper-button-prev',
+		},
+	});
+}
+
+// SLIDER LEADER (ABOUT PAGE)
+function sliderLeader() {
+	var swpier = new Swiper('.slider-Leaders .swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 15,
+		speed: 1000,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+
+		},
+		navigation: {
+			nextEl: '.slider-Leaders .swiper-button-next',
+			prevEl: '.slider-Leaders .swiper-button-prev',
+		},
+	});
+}
+
+// SLIDER Achievement (ABOUT PAGE)
+function sliderAchievement() {
+	var swpier = new Swiper('.slider-Achievement .swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 50,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+
+		},
+		navigation: {
+			nextEl: '.slider-Achievement .swiper-button-next',
+			prevEl: '.slider-Achievement .swiper-button-prev',
+		},
+	});
+}
+
+// SLIDER PRODUCT DETAIL
+function sliderProcutDetail() {
+
+	var images_Small = new Swiper('.slider-ProductDetail .small-image .swiper-container', {
+		direction: 'vertical',
+		spaceBetween: 20,
+		slidesPerView: 4,
+		freeMode: true,
+		loopedSlides: 5,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		slideToClickedSlide: true,
+		navigation: {
+			nextEl: '.small-image .swiper-button-next',
+			prevEl: '.small-image .swiper-button-prev',
+		},
+	});
+
+	var images_Big = new Swiper('.slider-ProductDetail .big-image .swiper-container', {
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true,
+		},
+		spaceBetween: 10,
+		simulateTouch: false,
+		loopedSlides: 3,
+		thumbs: {
+			swiper: images_Small,
 		},
 	});
 }
@@ -185,8 +267,13 @@ $(document).ready(function() {
 	showBackToTop();
 	showSearchMobile();
 	showMenuMobile();
+	showMoreContentAbout();
 	sliderHomeBanner();
+	sliderLeader();
+	sliderAchievement();
+	sliderProcutDetail();
 	activeHeader();
 	showFAQ();
 	typeIt();
+	const tabInformation = new Tab(".tab-information .tab-container");
 })

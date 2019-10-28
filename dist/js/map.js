@@ -61,7 +61,7 @@ var mapOptions = {
 			"featureType": "water",
 			"elementType": "all",
 			"stylers": [{
-					"color": "#164195"
+					"color": "#c0e4f3"
 				},
 				{
 					"visibility": "on"

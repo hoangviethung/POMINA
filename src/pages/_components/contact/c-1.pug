@@ -2,7 +2,7 @@ section.contact
 	include ../google-map/g-map.pug
 	.box-form-contact
 		.row
-			.col-lg-4
+			.col-lg-4.wow.fadeInLeft(data-wow-delay=".2s")
 				.list-contact
 					.item-contact
 						h3 Địa chỉ
@@ -27,11 +27,11 @@ section.contact
 								a(href="#")
 									img(src="./img/icons/twitter.svg", alt="", srcset="")
 			.col-lg-8
-				.desc
+				.desc.wow.fadeInLeft(data-wow-delay=".5s")
 					h3 LIÊN HỆ
 					p Thương hiệu POMINA với chất lượng sản phẩm cao và giá thành cạnh tranh – đã đạt được sự tín nhiệm của khách hàng trong nhiều năm qua. Mang lại giá trị gia tăng cho xã hội, Tôn POMINA không ngừng phấn đấu là niềm tự hào của ngành công nghiệp nặng Việt Nam.
 				form(action="#")
-					.form-row
+					.form-row.wow.fadeInLeft(data-wow-delay=".5s")
 						.form-group.col-lg-6
 							input(type="text" placeholder="Họ & Tên")
 						.form-group.col-lg-6
@@ -40,4 +40,4 @@ section.contact
 							input(type="email" placeholder="Email")
 						.form-group.col-lg-12
 							textarea(placeholder="Nội dung")
-					button.btn.no-box-shadow GỬI
+					button.btn.no-box-shadow.wow.flipInX.btn(data-wow-delay=".5s") GỬI

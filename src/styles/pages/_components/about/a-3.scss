@@ -1,0 +1,358 @@
+.content-about {
+	padding          : 130px 0 180px;
+	background-image : url(../img/about/bg-about.png);
+	background-repeat: no-repeat;
+	background-size  : cover;
+
+	span {
+		cursor        : pointer;
+		user-select   : none;
+		display       : inline-block;
+		font-size     : 21px;
+		color         : $main-color-2;
+		font-weight   : 700;
+		letter-spacing: 5px;
+		font-style    : italic;
+		margin-top    : 70px;
+	}
+
+	.title-about {
+		display      : inline-block;
+		position     : relative;
+		padding-right: 50px;
+		margin-bottom: 30px;
+
+		&:after {
+			content         : "";
+			position        : absolute;
+			top             : 0;
+			right           : 10px;
+			transform-origin: 100% 100%;
+			background      : #777777;
+			width           : 1px;
+			height          : 100%;
+		}
+
+		h2 {
+			font-size  : 29px;
+			color      : #434343;
+			font-weight: 700;
+		}
+
+		span {
+			font-size     : 21px;
+			color         : $main-color-2;
+			font-style    : italic;
+			letter-spacing: 5px;
+		}
+	}
+
+	.desc {
+		height    : 380px;
+		overflow  : hidden;
+		transition: .3s all ease-out;
+
+		p {
+			font-size    : 18px;
+			margin-bottom: 30px;
+			color        : #777777;
+
+			&.bold {
+				color        : #000000;
+				font-weight  : 700;
+				margin-bottom: 50px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&.show-more {
+			height: 623px;
+		}
+	}
+
+	figure {
+		overflow: hidden;
+		height  : 800px;
+	}
+}
+
+.title-about {
+	padding-bottom: 65px;
+	text-align    : center;
+	color         : #434343;
+
+	&.pb-100 {
+		padding-bottom: 100px;
+	}
+
+	h3 {
+		font-size    : 29px;
+		margin-bottom: 20px;
+
+		&.mb-0 {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		font-size: 17px;
+		width    : 25%;
+		margin   : 0 auto;
+	}
+}
+
+.sologan {
+	figure {
+		position   : relative;
+		overflow   : hidden;
+		height     : 400px;
+		display    : flex;
+		align-items: center;
+
+		&:after {
+			content   : '';
+			position  : absolute;
+			background: $main-color-1;
+			opacity   : .8;
+			top       : 0;
+			left      : 0;
+			width     : 100%;
+			height    : 100%;
+		}
+
+		figcaption {
+			display        : flex;
+			position       : absolute;
+			z-index        : 1;
+			margin         : 0 auto;
+			justify-content: center;
+			width          : 100%;
+
+			h5,
+			p {
+				font-size: 29px;
+			}
+
+			h5 {
+				position     : relative;
+				padding-right: 100px;
+				font-weight  : 700;
+				color        : $main-color-2;
+
+				&:after {
+					content         : "";
+					position        : absolute;
+					top             : 0;
+					right           : 10px;
+					transform-origin: 100% 100%;
+					background      : #FFFFFF;
+					width           : 1px;
+					height          : 100%;
+				}
+
+			}
+
+			p {
+				font-weight: 400;
+				color      : #FFFFFF;
+			}
+		}
+	}
+}
+
+.leaders {
+	background: #F5F5F5;
+	padding   : 100px 0;
+
+	figure {
+		position  : relative;
+		height    : 560px;
+		transition: .3s all ease-out;
+
+		.box-img {
+			position: absolute;
+			top     : 0;
+			left    : 0;
+			width   : 100%;
+			height  : 370px;
+		}
+
+		figcaption {
+			position  : absolute;
+			bottom    : 0;
+			left      : 0;
+			width     : 100%;
+			height    : 200px;
+			padding   : 0 30px;
+			background: #FFFFFF;
+			transition: .5s all ease-out;
+
+			h3 {
+				font-size  : 21px;
+				text-align : center;
+				color      : #434343;
+				margin     : 20px 0;
+				font-weight: 400;
+			}
+
+			h4 {
+				text-align    : center;
+				font-size     : 14px;
+				color         : $main-color-2;
+				font-weight   : 700;
+				letter-spacing: 5px;
+			}
+
+			p {
+				color             : #434343;
+				line-height       : 30px;
+				max-height        : 60px;
+				margin            : 20px 0;
+				-webkit-line-clamp: 2;
+			}
+
+			ul.list-contact {
+				border-top   : 1px solid #F5F5F5;
+				padding-top  : 20px;
+				margin-bottom: 20px;
+				height       : 0;
+				opacity      : 0;
+				transition   : .3s all ease-out;
+
+				.item {
+					display: flex;
+
+					h5 {
+						font-size    : 14px;
+						font-weight  : 700;
+						color        : $main-color-1;
+						padding-right: 20px;
+					}
+
+					span {
+						font-size     : 14px;
+						letter-spacing: 5px;
+						color         : #777777;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			figcaption {
+				height    : 335px;
+				transition: .5s all ease-out;
+
+				ul.list-contact {
+					height : auto;
+					opacity: 1;
+				}
+
+				p {
+					max-height        : 120px;
+					-webkit-line-clamp: 4;
+				}
+			}
+		}
+	}
+
+	.slider-Leaders {
+		position: relative;
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			background-size  : cover;
+			width            : 80px;
+			height           : 80px;
+			background-repeat: no-repeat;
+			z-index          : 1;
+			transition       : .3s all ease-in-out;
+		}
+
+		.swiper-button-next {
+			background-image: url(../img/icons/slider-next-leader.svg);
+			right           : -100px;
+		}
+
+		.swiper-button-prev {
+			background-image: url(../img/icons/slider-prev-leader.svg);
+			left            : -100px;
+		}
+	}
+}
+
+.factory-system {
+	figure {
+		position   : relative;
+		overflow   : hidden;
+		height     : 400px;
+		display    : flex;
+		align-items: center;
+
+		&:after {
+			content   : '';
+			position  : absolute;
+			background: $main-color-1;
+			opacity   : .8;
+			top       : 0;
+			left      : 0;
+			width     : 100%;
+			height    : 100%;
+		}
+
+		figcaption {
+			position : absolute;
+			top      : 50%;
+			left     : 50%;
+			transform: translate(-50%, -50%);
+			z-index  : 1;
+		}
+	}
+}
+
+.achievement {
+	background: #F5F5F5;
+	padding   : 100px 0;
+
+	figure {
+		.box-img {
+			height       : 252px;
+			margin-bottom: 35px;
+		}
+
+		p {
+			font-size : 17px;
+			color     : #000000;
+			text-align: center;
+		}
+	}
+
+	.slider-Achievement {
+		position: relative;
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			top              : -30px;
+			background-size  : cover;
+			width            : 8px;
+			height           : 12px;
+			background-repeat: no-repeat;
+			z-index          : 1;
+			transition       : .3s all ease-in-out;
+		}
+
+		.swiper-button-next {
+			background-image: url(../img/icons/achievement-next.svg);
+			right           : 0;
+		}
+
+		.swiper-button-prev {
+			background-image: url(../img/icons/achievement-prev.svg);
+			left            : unset;
+			right           : 30px;
+		}
+	}
+}

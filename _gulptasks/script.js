@@ -34,7 +34,9 @@ export const jsTask = () => {
 		.pipe(sourcemap.init({
 			loadMaps: true
 		}))
-		.pipe(uglifyBabel())
+		.pipe(uglifyBabel({
+			mangle: false,
+		}))
 		.pipe(rename({
 			suffix: ".min"
 		}))
