@@ -122,12 +122,14 @@
 			flex-wrap      : wrap;
 			justify-content: space-between;
 			align-items    : center;
+			border         : 1px solid #F5F5F5;
 
 			.item {
-				cursor   : pointer;
-				position : relative;
-				flex     : 0 0 50%;
-				max-width: 50%;
+				cursor     : pointer;
+				user-select: none;
+				position   : relative;
+				flex       : 0 0 50%;
+				max-width  : 50%;
 
 				color      : $main-color-1;
 				line-height: 75px;
@@ -158,6 +160,47 @@
 					&:after {
 						opacity: 1;
 					}
+				}
+			}
+		}
+
+		.tab-content {
+			background: #FCFCFC;
+			padding   : 60px;
+
+			.item {
+				margin-bottom: 70px;
+
+				h5 {
+					font-size    : 17px;
+					color        : #000000;
+					font-weight  : 700;
+					margin-bottom: 35px;
+				}
+
+				p {
+					font-size: 17px;
+					color    : #777777;
+				}
+			}
+
+			table {
+				width     : 100%;
+				text-align: center;
+
+				th,
+				td {
+					border   : 1px solid #707070;
+					padding  : 20px;
+					font-size: 18px;
+				}
+
+				th {
+					color: $main-color-2;
+				}
+
+				td {
+					color: #434343;
 				}
 			}
 		}
