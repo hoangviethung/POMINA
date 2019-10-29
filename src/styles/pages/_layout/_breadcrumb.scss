@@ -16,8 +16,8 @@
 
 		li {
 			a {
-				color      : #707070;
-				font-size  : 16px;
+				color      : #000000;
+				font-size  : 17px;
 				display    : inline-block;
 				padding-top: 20px;
 			}
@@ -30,11 +30,11 @@
 
 			&+li {
 				&:before {
-					font     : normal normal normal 24px/1 "Material Design Icons";
-					content  : "\F13E";
-					font-size: 10px;
-					margin   : 0 12px;
-					color    : #1C1C1C;
+					content : "/";
+					position: relative;
+					left    : 0;
+					top     : 0;
+					margin  : 0 12px;
 				}
 			}
 		}
