@@ -6,14 +6,11 @@ header {
 	left         : 0;
 	z-index      : 100;
 	border-bottom: 1px solid #F5F5F5;
-
-	&.active {
-		box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
-	}
+	transition   : .5s all ease-in-out;
 
 	.container {
-		padding : 25px 10px 0 10px;
-		position: relative;
+		padding-top: 25px;
+		position   : relative;
 	}
 
 	.col-no-rel {
@@ -27,6 +24,10 @@ header {
 
 		img {
 			width: 100%;
+
+			&:last-child {
+				display: none;
+			}
 		}
 
 		@media (max-width: 1199.98px) {
@@ -402,6 +403,57 @@ header {
 				select {
 					font-size: 13px;
 				}
+			}
+		}
+	}
+
+	&.active {
+		box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+		padding   : 20px 0;
+
+		.col-no-rel {
+			align-self: flex-end;
+		}
+
+		.container {
+			padding-top: 0;
+		}
+
+		.logo {
+			padding-top: 0;
+
+			img {
+				&:first-child {
+					display: none;
+				}
+
+				&:last-child {
+					display: block;
+				}
+			}
+		}
+
+		.top-header {
+			.search {
+				width    : 280px;
+				position : absolute;
+				right    : 15px;
+				top      : 50%;
+				transform: translateY(-50%);
+			}
+
+			.social-media-menu {
+				display: none;
+			}
+		}
+
+		.bottom-header {
+			margin-top : 0;
+			margin-left: 50px;
+			width      : 700px;
+
+			.nav-item {
+				padding-bottom: 0;
 			}
 		}
 	}

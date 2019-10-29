@@ -275,19 +275,23 @@ function showFAQ() {
 // GÕ CHỮ RA TỪ TỪ
 function typeIt() {
 	new TypeIt('.typeit', {
-		speed: 200,
+		speed: 300,
+		cursor: false,
 		waitUntilVisible: true,
 	}).go();
 }
 
 function scrollToSologan() {
-	$(window).scroll(function() {
-		var offsetSologan = $('.sologan').offset();
-		var topOffsetSologan = offsetSologan.top;
-		if ($(this).scrollTop() > topOffsetSologan - 500) {
-			$('.sologan').find('h5').addClass('active');
-		}
-	});
+	if ($('.sologan').length) {
+		let offsetSologan = $('.sologan').offset();
+		let topOffsetSologan = offsetSologan.top;
+
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > topOffsetSologan - 500) {
+				$('.sologan').find('h5').addClass('active');
+			}
+		});
+	}
 }
 
 $(document).ready(function() {

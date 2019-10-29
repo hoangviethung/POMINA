@@ -1,8 +1,17 @@
 .content-about {
-	padding          : 130px 0 180px;
+	padding          : 100px 0;
 	background-image : url(../img/about/bg-about.png);
 	background-repeat: no-repeat;
 	background-size  : cover;
+
+	.row {
+		align-items: center;
+		margin     : 0 -60px;
+
+		.col-lg-6 {
+			padding: 0 30px;
+		}
+	}
 
 	span {
 		cursor        : pointer;
@@ -168,7 +177,7 @@
 
 .leaders {
 	background: #F5F5F5;
-	padding   : 100px 0;
+	padding   : 50px 0;
 
 	figure {
 		position  : relative;
@@ -318,7 +327,7 @@
 
 .achievement {
 	background: #F5F5F5;
-	padding   : 100px 0;
+	padding   : 50px 0;
 
 	figure {
 		.box-img {

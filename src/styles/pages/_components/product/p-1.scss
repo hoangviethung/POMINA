@@ -1,5 +1,5 @@
 .home-list-product {
-	padding            : 115px 0 230px;
+	padding            : 50px 0;
 	background-image   : url(../img/home-products-bg.png);
 	background-repeat  : no-repeat;
 	background-size    : cover;
@@ -22,6 +22,18 @@
 
 					figure {
 						height: 423px;
+					}
+				}
+
+				&:nth-last-child(2) {
+					.item-product {
+						margin-bottom: 0;
+					}
+				}
+
+				&:nth-last-child(1) {
+					.item-product {
+						margin-bottom: 0;
 					}
 				}
 			}
