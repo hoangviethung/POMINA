@@ -272,11 +272,22 @@ function showFAQ() {
 	});
 }
 
+// GÕ CHỮ RA TỪ TỪ
 function typeIt() {
 	new TypeIt('.typeit', {
 		speed: 200,
 		waitUntilVisible: true,
 	}).go();
+}
+
+function scrollToSologan() {
+	$(window).scroll(function() {
+		var offsetSologan = $('.sologan').offset();
+		var topOffsetSologan = offsetSologan.top;
+		if ($(this).scrollTop() > topOffsetSologan - 500) {
+			$('.sologan').find('h5').addClass('active');
+		}
+	});
 }
 
 $(document).ready(function() {
@@ -288,6 +299,7 @@ $(document).ready(function() {
 	showSearchMobile();
 	showMenuMobile();
 	showMoreContentAbout();
+	scrollToSologan();
 	sliderHomeBanner();
 	sliderLeader();
 	sliderAchievement();
