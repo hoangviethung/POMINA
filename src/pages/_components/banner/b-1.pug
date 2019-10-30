@@ -1,14 +1,9 @@
 section.home-banner
 	.swiper-container.slider-HomeBanner
 		.swiper-wrapper
-				-for(i=1;i<4;i++)
-					.swiper-slide
-						figure
-							img.ofc(src="./img/banner/1.png", alt="", srcset="")
-							figcaption
-								span Khởi đầu
-								.title xu hướng
-								span Tạo sự
-								.title khác biệt
+			-for(i=1;i<5;i++)
+				.swiper-slide
+					figure
+						img.ofc(src="./img/banner/"+i+".png", alt="", srcset="")
 		.swiper-button-next
 		.swiper-button-prev
