@@ -72,50 +72,58 @@
 			</div>
 			<section class="contact">
 				<div class="google-map">
+					<select>
+						<option value="inputLocations_1">Bản Đồ Nội Địa</option>
+						<option value="inputLocations_2">Bản Đồ Ngoại Địa</option>
+					</select>
 					<div id="map"></div>
 				</div>
 				<script>
-					var inputLocations = [
-						{
-							lat: 10.807100,
-							lng: 106.661638,
-							name: 'Ho Chi Minh Headoffice',
-							icon: "./img/icons/gmap.svg",
-							address: 'Floor 4, Thang Long Building, 29 Thang Long St., Ward 4,  Tan Binh Dist., HCMC, Vietnam.',
-							hotLine: '(+84) 903 910 430 - Mr.Linh',
-							phone: '(84.28) 3848 7858',
-							fax: '(84.28) 3848 7858',
-							email: 'npv-saleadmin@npvexpress.com',
-							website: 'www.npvexpress.com',
-							optimized: false
-						},
-						{
-							lat: 11.328765,
-							lng: 106.476674,
-							name: 'Binh Duong Branch',
-							icon: "./img/icons/gmap.svg",
-							address: '9b/5g Binh Dang Hamlet, Binh Hoa Village, Thuan An Dist Binh Duong',
-							hotLine: '(+84) 903 910 430 - Mr.Linh',
-							phone: '(84.28) 3848 7858',
-							fax: '(84.28) 3848 7858',
-							email: 'npv-saleadmin@npvexpress.com',
-							website: 'www.npvexpress.com',
-							optimized: false
-						},
-						{
-							lat: 11.328765,
-							lng: 106.476674,
-							name: 'Vung Tau Branch',
-							icon: "./img/icons/gmap.svg",
-							address: '8th Floor, Rôm 813, Seaview 1building, Chi Linh Area, Vung Tau',
-							hotLine: '(+84) 903 910 430 - Mr.Linh',
-							phone: '(84.28) 3848 7858',
-							fax: '(84.28) 3848 7858',
-							email: 'npv-saleadmin@npvexpress.com',
-							website: 'www.npvexpress.com',
-							optimized: false
-						}
-					];
+					var locationsObject = {
+						inputLocations_1 : [
+							{
+								lat: 10.807100,
+								lng: 106.661638,
+								name: 'Ho Chi Minh Headoffice',
+								icon: "./img/icons/gmap.svg",
+								address: 'Floor 4, Thang Long Building, 29 Thang Long St., Ward 4,  Tan Binh Dist., HCMC, Vietnam.',
+								hotLine: '(+84) 903 910 430 - Mr.Linh',
+								phone: '(84.28) 3848 7858',
+								fax: '(84.28) 3848 7858',
+								email: 'npv-saleadmin@npvexpress.com',
+								website: 'www.npvexpress.com',
+								optimized: false
+							},
+							{
+								lat: 11.328765,
+								lng: 106.476674,
+								name: 'Binh Duong Branch',
+								icon: "./img/icons/gmap.svg",
+								address: '9b/5g Binh Dang Hamlet, Binh Hoa Village, Thuan An Dist Binh Duong',
+								hotLine: '(+84) 903 910 430 - Mr.Linh',
+								phone: '(84.28) 3848 7858',
+								fax: '(84.28) 3848 7858',
+								email: 'npv-saleadmin@npvexpress.com',
+								website: 'www.npvexpress.com',
+								optimized: false
+							}
+						],
+						inputLocations_2 : [
+							{
+								lat: 11.328765,
+								lng: 106.476674,
+								name: 'Binh Duong Branch',
+								icon: "./img/icons/gmap.svg",
+								address: '9b/5g Binh Dang Hamlet, Binh Hoa Village, Thuan An Dist Binh Duong',
+								hotLine: '(+84) 903 910 430 - Mr.Linh',
+								phone: '(84.28) 3848 7858',
+								fax: '(84.28) 3848 7858',
+								email: 'npv-saleadmin@npvexpress.com',
+								website: 'www.npvexpress.com',
+								optimized: false
+							},
+						]
+					}
 				</script>
 				<div class="box-form-contact">
 					<div class="row">
@@ -220,7 +228,53 @@
 		</div>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&amp;key=AIzaSyCHvmyTralDp2Y0m7zEiN185u1vtArcC5s&amp;libraries=places"></script>
 		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v4.0&amp;appId=774359209430335&amp;autoLogAppEvents=1"></script>
-		<script type="text/javascript" src="./js/map.js"></script>
+		<script>
+			var locationsObject = {
+				inputLocations_1 : [
+					{
+						lat: 10.807100,
+						lng: 106.661638,
+						name: 'Ho Chi Minh Headoffice',
+						icon: "./img/icons/gmap.svg",
+						address: 'Floor 4, Thang Long Building, 29 Thang Long St., Ward 4,  Tan Binh Dist., HCMC, Vietnam.',
+						hotLine: '(+84) 903 910 430 - Mr.Linh',
+						phone: '(84.28) 3848 7858',
+						fax: '(84.28) 3848 7858',
+						email: 'npv-saleadmin@npvexpress.com',
+						website: 'www.npvexpress.com',
+						optimized: false
+					},
+					{
+						lat: 11.328765,
+						lng: 106.476674,
+						name: 'Binh Duong Branch',
+						icon: "./img/icons/gmap.svg",
+						address: '9b/5g Binh Dang Hamlet, Binh Hoa Village, Thuan An Dist Binh Duong',
+						hotLine: '(+84) 903 910 430 - Mr.Linh',
+						phone: '(84.28) 3848 7858',
+						fax: '(84.28) 3848 7858',
+						email: 'npv-saleadmin@npvexpress.com',
+						website: 'www.npvexpress.com',
+						optimized: false
+					}
+				],
+				inputLocations_2 : [
+					{
+						lat: 11.328765,
+						lng: 106.476674,
+						name: 'Binh Duong Branch',
+						icon: "./img/icons/gmap.svg",
+						address: '9b/5g Binh Dang Hamlet, Binh Hoa Village, Thuan An Dist Binh Duong',
+						hotLine: '(+84) 903 910 430 - Mr.Linh',
+						phone: '(84.28) 3848 7858',
+						fax: '(84.28) 3848 7858',
+						email: 'npv-saleadmin@npvexpress.com',
+						website: 'www.npvexpress.com',
+						optimized: false
+					},
+				]
+			}
+		</script>
 		<script type="text/javascript" src="./js/core.min.js"></script>
 		<script type="text/javascript" src="./js/main.min.js"></script>
 	</body>

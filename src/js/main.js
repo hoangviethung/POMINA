@@ -1,3 +1,6 @@
+// @import File Here !!!
+import map from "./map";
+
 // Function thêm class lazyload vào các thẻ <img> có thuộc tính [data-src]
 const addClassLazyload = () => {
 	let imgList = document.querySelectorAll("img[data-src]")
@@ -262,16 +265,6 @@ function _getThumbnailYoutube() {
 	})
 }
 
-// FAQ
-function showFAQ() {
-	$('.FAQ .item-group .question').click(function(e) {
-		e.preventDefault();
-
-		$(this).find('.arrow-icon').toggleClass('active');
-		$(this).siblings('.answer').slideToggle();
-	});
-}
-
 // GÕ CHỮ RA TỪ TỪ
 function typeIt() {
 	new TypeIt('.typeit', {
@@ -281,6 +274,7 @@ function typeIt() {
 	}).go();
 }
 
+// SỰ KIỆN LINE CHÉO SOLOGAN
 function scrollToSologan() {
 	if ($('.sologan').length) {
 		let offsetSologan = $('.sologan').offset();
@@ -295,22 +289,32 @@ function scrollToSologan() {
 }
 
 $(document).ready(function() {
+	// GOOGLE MAP
+	map();
+	// WOW
 	new WOW().init();
+	// TYPE-IT
+	typeIt();
+	// Object Images
 	objectFitImages("img.ofc");
-	activeMenuByUrl();
-	_getThumbnailYoutube();
-	showBackToTop();
-	showSearchMobile();
+	// MENU
 	showMenuMobile();
+	showSearchMobile();
+	activeMenuByUrl();
+	activeHeader();
+	// YOUTUBE
+	_getThumbnailYoutube();
+	// BACK TO TOP
+	showBackToTop();
+	// ABOUT
 	showMoreContentAbout();
 	scrollToSologan();
+	// SLIDER
 	sliderHomeBanner();
 	sliderLeader();
 	sliderAchievement();
 	sliderProcutDetail();
 	sliderSameProduct();
-	activeHeader();
-	showFAQ();
-	typeIt();
-	const tabInformation = new Tab(".tab-information .tab-container");
+	// TAB
+	const tabGoogleMap = new Tab('.google-map .tab-container');
 })
