@@ -9,6 +9,15 @@
 	visibility: hidden;
 	transition: .5s all ease-in-out;
 
+	width              : 55px;
+	height             : 55px;
+	background         : $main-color-1;
+	border-radius      : 50%;
+	background-image   : url(../img/icons/arrow-select-white.svg);
+	background-repeat  : no-repeat;
+	background-position: center center;
+	transform          : rotate(180deg);
+
 	&.active {
 		opacity   : 1;
 		visibility: visible;
