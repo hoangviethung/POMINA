@@ -1,13 +1,11 @@
 {
 	"vendor": {
 		"font": [
-			"bower_components/mdi/fonts/**",
-			"bower_components/font-awesome/webfonts/**",
-			"bower_components/linearicons/dist/web-font/fonts/**"
+			"bower_components/mdi/fonts/**"
 		],
 		"js": [
-			"bower_components/jquery/dist/jquery.min.js",
 			"bower_components/wow/dist/wow.js",
+			"bower_components/jquery/dist/jquery.min.js",
 			"bower_components/fancybox/dist/jquery.fancybox.js",
 			"bower_components/object-fit-images/dist/ofi.browser.js",
 			"bower_components/lazysizes/lazysizes.js",

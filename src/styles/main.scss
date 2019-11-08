@@ -1,6 +1,3 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-
 @import 'base/color';
 @import 'base/fonts';
 @import 'base/reset';
@@ -14,27 +11,20 @@
 @import 'pages/_layout/pagination';
 @import 'pages/_layout/back-to-top';
 
-// BANNER
-@import 'pages/_components/banner/b-1.scss';
+// INDEX
+@import 'pages/index';
 
 // ABOUT
-@import 'pages/_components/about/a-1.scss';
-@import 'pages/_components/about/a-2.scss';
-@import 'pages/_components/about/a-3.scss';
+@import 'pages/_components/about/a-1';
 
 // PRODUCT
-@import 'pages/_components/product/p-1.scss';
-@import 'pages/_components/product/p-2.scss';
-@import 'pages/_components/product/p-3.scss';
-@import 'pages/_components/product/same-product.scss';
+@import 'pages/_components/product/p-1';
+@import 'pages/_components/product/p-2';
+@import 'pages/_components/product/same-product';
 
 // NEWS
-@import 'pages/_components/news/n-1.scss';
-@import 'pages/_components/news/n-2.scss';
+@import 'pages/_components/news/n-1';
 @import 'pages/_components/news/aside_news';
 
-// FORM ĐĂNG KÝ
-@import 'pages/_components/form-dang-ky/f-1.scss';
-
 // CONTACT
-@import 'pages/_components/contact/c-1.scss';
+@import 'pages/_components/contact/c-1';

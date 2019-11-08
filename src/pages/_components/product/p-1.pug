@@ -1,62 +1,84 @@
-section.home-list-product
+section.banner
+	figure
+		img.ofc(src="./img/banner/2.png", alt="", srcset="")
+section.product-page
 	.container
-		.title.wow.fadeIn(data-wow-delay=".2s")
-			span SẢN PHẨM
-			h3 TÔN POMINA
+		.filter
+			h5 SẮP XẾP THEO
+			.form-group
+				select(name="#")
+					option(value="") Mặc định
+					option(value="") A - Z
+					option(value="") Z - A
+					option(value="") G - C
+					option(value="") A - Q
+					option(value="") 0 - 9
+					option(value="") I - U
+					option(value="") U - I
 		.list-item
-			.row
-				.col-lg-4.col-md-6
-					.item-product.mb-80.wow.fadeInLeft(data-wow-delay=".2s")
-						figure
-							.box-img
-								img.ofc(src="./img/products/1.png", alt="")
-								.name-product
-									img(src="./img/products/chu-1.png", alt="")
-							figcaption
-								h5 TÔN LẠNH
-								h5 AZ70 / AZ100
-								a(href="san-pham.html").btn.no-box-shadow XEM CHI TIẾT
-				.col-lg-4.col-md-6
-					.item-product.mb-80.wow.fadeInDown(data-wow-delay=".2s")
-						figure
-							.box-img
-								img.ofc(src="./img/products/2.png", alt="", srcset="")
-								.name-product
-									img(src="./img/products/chu-2.png", alt="")
-							figcaption
-								h5 TÔN LẠNH MÀU
-								h5 AZ50
-								a(href="san-pham.html").btn.no-box-shadow XEM CHI TIẾT
-				.col-lg-4.col-md-6
-					.item-product.mb-80.wow.fadeInRight(data-wow-delay=".2s")
-						figure
-							.box-img
-								img.ofc(src="./img/products/3.png", alt="", srcset="")
-								.name-product
-									img(src="./img/products/chu-3.png", alt="")
-							figcaption
-								h5 TÔN LẠNH MÀU
-								h5 AZ100
-								a(href="san-pham.html").btn.no-box-shadow XEM CHI TIẾT
-				.col-lg-4.col-md-6
-					.item-product.mb-80.wow.fadeInLeft(data-wow-delay=".2s")
-						figure
-							.box-img
-								img.ofc(src="./img/products/4.png", alt="", srcset="")
-								.name-product
-									img(src="./img/products/chu-4.png", alt="")
-							figcaption
-								h5 TÔN LẠNH MÀU
-								h5 AZ150
-								a(href="san-pham.html").btn.no-box-shadow XEM CHI TIẾT
-				.col-lg-4.col-md-6
-					.item-product.mb-80.wow.fadeInRight(data-wow-delay=".2s")
-						figure
-							.box-img
-								img.ofc(src="./img/products/5.png", alt="", srcset="")
-								.name-product
-									img(src="./img/products/chu-5.png", alt="")
-							figcaption
-								h5 TÔN LẠNH
-								h5 AZ150
-								a(href="san-pham.html").btn.no-box-shadow XEM CHI TIẾT
+			.item
+				.item-product.mb-80.wow.fadeInLeft(data-wow-delay=".2s")
+					figure
+						.box-img
+							img.ofc(src="./img/products/1.png", alt="", srcset="")
+							.name-product
+								p Z70 / AZ100
+						figcaption
+							h5 TÔN LẠNH
+							h5 AZ70 / AZ100
+							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
+			.item
+				.item-product.mb-80.wow.fadeInDown(data-wow-delay=".2s")
+					figure
+						.box-img
+							img.ofc(src="./img/products/2.png", alt="", srcset="")
+							.name-product
+								p MÀU AZ50
+						figcaption
+							h5 TÔN LẠNH MÀU
+							h5 AZ50
+							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
+			.item
+				.item-product.mb-80.wow.fadeInRight(data-wow-delay=".2s")
+					figure
+						.box-img
+							img.ofc(src="./img/products/3.png", alt="", srcset="")
+							.name-product
+								p MÀU AZ100
+						figcaption
+							h5 TÔN LẠNH MÀU
+							h5 AZ100
+							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
+			.item
+				.item-product.mb-80.wow.fadeInLeft(data-wow-delay=".2s")
+					figure
+						.box-img
+							img.ofc(src="./img/products/4.png", alt="", srcset="")
+							.name-product
+								p AZ 150
+						figcaption
+							h5 TÔN LẠNH MÀU
+							h5 AZ100
+							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
+			.item
+				.item-product.mb-80.wow.fadeInUp(data-wow-delay=".2s")
+					figure
+						.box-img
+							img.ofc(src="./img/products/5.png", alt="", srcset="")
+							.name-product
+								p TÔN LẠNH SHEILD VIET AZ150
+						figcaption
+							h5 TÔN LẠNH MÀU`
+							h5 AZ100
+							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
+			.item
+				.item-product.mb-80.wow.fadeInRight(data-wow-delay=".2s")
+					figure
+						.box-img
+							img.ofc(src="./img/products/6.png", alt="", srcset="")
+							.name-product
+								p TÔN LẠNH SHEILD VIET AZ150
+						figcaption
+							h5 TÔN LẠNH MÀU
+							h5 AZ100
+							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT

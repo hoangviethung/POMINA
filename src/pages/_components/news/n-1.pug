@@ -1,33 +1,22 @@
-section.home-news
-	.title.wow.fadeIn(data-wow-delay=".2s")
-		span TIN TỨC
-		h5 TÔN POMINA
-	.list-home-news
-		.home-news-item.wow.fadeInDown(data-wow-delay=".2s")
-			a(href="tin-tuc-chi-tiet.html")
-				figure
-					.box-img
-						img.ofc(src="./img/news/1.png", alt="", srcset="")
-						.date
-							h5 26
-							span TH8
-					figcaption
-						.desc
-							p.limit-line Thép Pomina (POM): Năm 2017 đạt mức lãi sau thuế kỷ lục gần 700 tỷ đồng
-						.bottom
-							span By Pomina
-							a(href="tin-tuc-chi-tiet.html") Xem thêm
-		.home-news-item.wow.fadeInUp(data-wow-delay=".2s")
-			a(href="tin-tuc-chi-tiet.html")
-				figure
-					.box-img
-						img.ofc(src="./img/news/2.png", alt="", srcset="")
-						.date
-							h5 26
-							span TH8
-					figcaption
-						.desc
-							p.limit-line Thép Pomina (POM): Năm 2017 đạt mức lãi sau thuế kỷ lục gần 700 tỷ đồng . Thép Pomina (POM): Năm 2017 đạt mức lãi sau thuế kỷ lục gần 700 tỷ đồng Thép Pomina.
-						.bottom
-							span By Pomina
-							a(href="tin-tuc-chi-tiet.html") Xem thêm
+section.list-news
+	.container
+		.row
+			.col-lg-12
+				-for(i=1;i<9;i++)
+					.item-news.wow.fadeInDown(data-wow-delay=".2s")
+						figure
+							.box-img
+								img.ofc(src="./img/news/"+i+".png", alt="", srcset="")
+								.date
+									h5 26
+									span TH8
+							figcaption
+								a(href="tin-tuc-chi-tiet.html")
+									.box-content
+										h3.limit-line THÉP POMINA (POM): NĂM 2017 ĐẠT MỨC LÃI SAU THUẾ KỶ LỤC GẦN 700 TỶ ĐỒNG
+										hr
+										p.limit-line Tính riêng quý 4 doanh thu thuần đạt 3.038 tỷ đồng, tăng hơn 5% so với cùng kỳ, trong đó doanh thu thép tiêu thụ nội địa đạt 2.262 tỷ đồng, chiếm 74,5% tổng doanh thu và ...
+										.bottom
+											span By Pomina
+											a(href="tin-tuc-chi-tiet.html") Xem thêm
+		include ../../_layout/_pagination.pug

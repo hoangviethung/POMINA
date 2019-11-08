@@ -1,84 +1,104 @@
-section.banner
-	figure
-		img.ofc(src="./img/banner/2.png", alt="", srcset="")
-section.product-page
-	.container
-		.filter
-			h5 SẮP XẾP THEO
-			.form-group
-				select(name="#")
-					option(value="") Mặc định
-					option(value="") A - Z
-					option(value="") Z - A
-					option(value="") G - C
-					option(value="") A - Q
-					option(value="") 0 - 9
-					option(value="") I - U
-					option(value="") U - I
-		.list-item
-			.item
-				.item-product.mb-80.wow.fadeInLeft(data-wow-delay=".2s")
-					figure
-						.box-img
-							img.ofc(src="./img/products/1.png", alt="", srcset="")
-							.name-product
-								p Z70 / AZ100
-						figcaption
-							h5 TÔN LẠNH
-							h5 AZ70 / AZ100
-							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
-			.item
-				.item-product.mb-80.wow.fadeInDown(data-wow-delay=".2s")
-					figure
-						.box-img
-							img.ofc(src="./img/products/2.png", alt="", srcset="")
-							.name-product
-								p MÀU AZ50
-						figcaption
-							h5 TÔN LẠNH MÀU
-							h5 AZ50
-							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
-			.item
-				.item-product.mb-80.wow.fadeInRight(data-wow-delay=".2s")
-					figure
-						.box-img
-							img.ofc(src="./img/products/3.png", alt="", srcset="")
-							.name-product
-								p MÀU AZ100
-						figcaption
-							h5 TÔN LẠNH MÀU
-							h5 AZ100
-							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
-			.item
-				.item-product.mb-80.wow.fadeInLeft(data-wow-delay=".2s")
-					figure
-						.box-img
-							img.ofc(src="./img/products/4.png", alt="", srcset="")
-							.name-product
-								p AZ 150
-						figcaption
-							h5 TÔN LẠNH MÀU
-							h5 AZ100
-							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
-			.item
-				.item-product.mb-80.wow.fadeInUp(data-wow-delay=".2s")
-					figure
-						.box-img
-							img.ofc(src="./img/products/5.png", alt="", srcset="")
-							.name-product
-								p TÔN LẠNH SHEILD VIET AZ150
-						figcaption
-							h5 TÔN LẠNH MÀU`
-							h5 AZ100
-							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
-			.item
-				.item-product.mb-80.wow.fadeInRight(data-wow-delay=".2s")
-					figure
-						.box-img
-							img.ofc(src="./img/products/6.png", alt="", srcset="")
-							.name-product
-								p TÔN LẠNH SHEILD VIET AZ150
-						figcaption
-							h5 TÔN LẠNH MÀU
-							h5 AZ100
-							a(href="san-pham-chi-tiet.html").btn.no-box-shadow XEM CHI TIẾT
+section.product-detail
+	.overview
+		.container
+			.row
+				.col-lg-6
+					.slider-ProductDetail
+						.big-image
+							.swiper-container
+								.swiper-wrapper
+									-for(i=1;i<6;i++)
+										.swiper-slide
+											figure
+												img.ofc(src="./img/products/product-detail.png", alt="", srcset="")
+						.small-image
+							.swiper-container
+								.swiper-wrapper
+									-for(i=1;i<6;i++)
+										.swiper-slide
+											figure
+												img.ofc(src="./img/products/product-detail.png", alt="", srcset="")
+							.swiper-button-prev
+							.swiper-button-next
+				.col-lg-6
+					.info-product
+						h1.wow.fadeInDown(data-wow-delay=".2s") TÔN LẠNH SHEILD VIET AZ150
+						h5 CÒN HÀNG
+						.desc
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+							p Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+						a(href="lien-he.html").btn.no-box-shadow
+							img(src="./img/icons/bell.svg", alt="")
+							p LIÊN HỆ NGAY
+	.tab-information
+		.container
+			.tab-container
+				ul.list-tab.wow.fadeInUp(data-wow-delay=".2s")
+					li.item(toggle-for="item-1").active THÔNG TIN SẢN PHẨM
+					li.item(toggle-for="item-2") THÔNG SỐ KỸ THUẬT
+				.tab-content
+					.content(tab-id="item-1")
+						.row
+							.col-md-6.item
+								h5 ƯU ĐIỂM VƯỢT TRỘI
+								p - Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+								p - Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+								p - Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+								p - Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+							.col-md-6.item
+								h5 TẠI SAO NÊN CHỌN TÔN LẠNH SHEILD VIET AZ150
+								p - Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+								p - Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+								p - Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+								p - Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+							.col-md-6.item
+								h5 NHẬN DẠNG SẢN PHẨM
+								p - Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+								p - Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+								p - Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+								p - Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+							.col-md-6.item
+								h5 THỜI GIAN BẢO HÀNH
+								p - Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+								p - Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+								p - Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+								p - Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+					.content(tab-id="item-2")
+						table
+							thead
+								tr
+									th STT
+									th Tên sản phẩm
+									th Khổ rộng (mm)
+									th Độ dày BMT (mm)
+									th Độ dày APT (mm)
+									th Tỉ trong (kg/m + 0,1)
+							tbody
+								tr
+									td 01
+									td Tôn lạnh màu Pomina Sheild Viet
+									td 1200
+									td 0.23
+									td 0.45
+									td 3.25
+								tr
+									td 02
+									td Độ dày lớp mạ AZ150
+									td 1200
+									td 0.23
+									td 0.45
+									td 3.25
+								tr
+									td 03
+									td Loại thép G300 - G350
+									td 1200
+									td 0.23
+									td 0.45
+									td 3.25
+								tr
+									td 04
+									td Tiêu chuẩn tôn lạnh màu 1939237284/8374873
+									td 1200
+									td 0.23
+									td 0.45
+									td 3.25

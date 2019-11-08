@@ -75,18 +75,18 @@ function activeHeader() {
 	});
 }
 
-// ACTIVE ITEM MENU BY URL
-function activeMenuByUrl() {
-	var url = window.location.href.split('/').pop();
+	// ACTIVE ITEM MENU BY URL
+	function activeMenuByUrl() {
+		var url = window.location.href.split('/').pop();
 
-	let listNavItem = $('.bottom-header .nav-list .nav-item a');
-	listNavItem.each(function() {
-		let hung = $(this).attr('href');
-		if (url.includes(hung)) {
-			$(this).parents('.nav-item').addClass('active');
-		}
-	})
-}
+		let listNavItem = $('.bottom-header .nav-list .nav-item a');
+		listNavItem.each(function() {
+			let hung = $(this).attr('href');
+			if (url.includes(hung)) {
+				$(this).parents('.nav-item').addClass('active');
+			}
+		})
+	}
 
 // SHOW MENU IN MOBILE
 function showMenuMobile() {
