@@ -1,9 +1,30 @@
 .same-product {
-
 	margin: 85px 0;
 
-	figure {
-		height: 420px;
+	.slider-SameProduct {
+		position : relative;
+		max-width: 1090px;
+		margin   : 0 auto;
+		width    : 100%;
+
+		.swiper-button-prev {
+			background-image: url(../img/icons/arrow.svg);
+			transform       : rotate(180deg);
+			left            : -50px;
+		}
+
+		.swiper-button-next {
+			background-image: url(../img/icons/arrow.svg);
+			right           : -50px;
+		}
+	}
+
+	.item-product {
+		figure {
+			.box-img {
+				height: 415px;
+			}
+		}
 	}
 
 	h3 {
@@ -12,5 +33,6 @@
 		color      : $main-color-2;
 		padding    : 60px 0;
 		border-top : 1px solid #F5F5F5;
+		text-align : center;
 	}
 }

@@ -1,5 +1,7 @@
 main {
-	margin-top: -226px;
+	&.have-big-banner {
+		margin-top: -225px;
+	}
 }
 
 ::-webkit-scrollbar-track {
@@ -254,27 +256,18 @@ main {
 
 		.box-img {
 			position: relative;
-			height  : 100%;
+			height  : 570px;
 
-			.name-product {
+			&:after {
+				content   : '';
+				position  : absolute;
+				width     : 100%;
+				height    : 100%;
+				top       : 0;
+				right     : -100%;
+				background: $main-color-1;
+				opacity   : .5;
 				transition: .5s all ease-in-out;
-
-				img {
-					position: absolute;
-					bottom  : 30px;
-					left    : 30px;
-				}
-
-				p {
-					position : absolute;
-					bottom   : 30px;
-					left     : 50%;
-					transform: translateX(-50%);
-
-					font-size  : 21px;
-					font-weight: 700;
-					color      : #FFFFFF;
-				}
 			}
 		}
 
@@ -308,23 +301,22 @@ main {
 			}
 		}
 
-		&:after {
-			content   : '';
-			position  : absolute;
-			width     : 100%;
-			height    : 100%;
-			top       : 0;
-			right     : -100%;
-			background: $main-color-1;
-			opacity   : .5;
-			transition: .5s all ease-in-out;
+		.name-product {
+			margin-top: 20px;
+			color     : $main-color-2;
+			font-size : 21px;
+
+			&.blue {
+				color: $main-color-1;
+			}
 		}
+
 
 		@media (min-width: 1440px) {
 			&:hover {
 				.box-img {
-					.name-product {
-						opacity: 0;
+					&:after {
+						right: 0;
 					}
 				}
 
@@ -332,9 +324,7 @@ main {
 					opacity: 1;
 				}
 
-				&:after {
-					right: 0;
-				}
+
 			}
 		}
 	}

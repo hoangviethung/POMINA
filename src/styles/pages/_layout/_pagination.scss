@@ -58,13 +58,31 @@
 }
 
 .lnr-chevron-left {
+	position: relative;
+
 	&::before {
-		content: '\e879'
+		content         : '';
+		position        : absolute;
+		left            : 50%;
+		top             : 50%;
+		transform       : translate(-50%, -50%) rotate(180deg);
+		width           : 9px;
+		height          : 14px;
+		background-image: url(../img/icons/arrow.svg);
 	}
 }
 
 .lnr-chevron-right {
+	position: relative;
+
 	&::before {
-		content: '\e87a'
+		content         : '';
+		position        : absolute;
+		left            : 50%;
+		top             : 50%;
+		transform       : translate(-50%, -50%);
+		width           : 9px;
+		height          : 14px;
+		background-image: url(../img/icons/arrow.svg);
 	}
 }

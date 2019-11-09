@@ -64,6 +64,15 @@ class Tab {
 	}
 }
 
+// CHECK LAYOUT
+function checkLayout() {
+	let selector = document.querySelector('body .index-page');
+
+	if (selector) {
+		document.querySelector('main').classList.add('have-big-banner');
+	}
+}
+
 // ACTIVE HEADER WHEN SCROLL
 function activeHeader() {
 	$(window).scroll(function() {
@@ -75,18 +84,18 @@ function activeHeader() {
 	});
 }
 
-	// ACTIVE ITEM MENU BY URL
-	function activeMenuByUrl() {
-		var url = window.location.href.split('/').pop();
+// ACTIVE ITEM MENU BY URL
+function activeMenuByUrl() {
+	var url = window.location.href.split('/').pop();
 
-		let listNavItem = $('.bottom-header .nav-list .nav-item a');
-		listNavItem.each(function() {
-			let hung = $(this).attr('href');
-			if (url.includes(hung)) {
-				$(this).parents('.nav-item').addClass('active');
-			}
-		})
-	}
+	let listNavItem = $('.bottom-header .nav-list .nav-item a');
+	listNavItem.each(function() {
+		let hung = $(this).attr('href');
+		if (url.includes(hung)) {
+			$(this).parents('.nav-item').addClass('active');
+		}
+	})
+}
 
 // SHOW MENU IN MOBILE
 function showMenuMobile() {
@@ -161,27 +170,6 @@ function sliderHomeBanner() {
 	});
 }
 
-// SLIDER LEADER (ABOUT PAGE)
-function sliderLeader() {
-	var swpier = new Swiper('.slider-Leaders .swiper-container', {
-		slidesPerView: 4,
-		spaceBetween: 15,
-		speed: 1000,
-		loop: true,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
-		},
-		breakpoints: {
-
-		},
-		navigation: {
-			nextEl: '.slider-Leaders .swiper-button-next',
-			prevEl: '.slider-Leaders .swiper-button-prev',
-		},
-	});
-}
-
 // SLIDER Achievement (ABOUT PAGE)
 function sliderAchievement() {
 	var swpier = new Swiper('.slider-Achievement .swiper-container', {
@@ -235,8 +223,8 @@ function sliderProcutDetail() {
 
 // SLIDER SAME PRODUCT
 function sliderSameProduct() {
-	var swpier = new Swiper('.slider-SameProduct', {
-		slidesPerView: 4,
+	var swpier = new Swiper('.slider-SameProduct .swiper-container', {
+		slidesPerView: 3,
 		spaceBetween: 20,
 		speed: 1000,
 		simulateTouch: false,
@@ -268,7 +256,7 @@ function _getThumbnailYoutube() {
 // GÕ CHỮ RA TỪ TỪ
 function typeIt() {
 	new TypeIt('.typeit', {
-		speed: 300,
+		speed: 50,
 		cursor: false,
 		waitUntilVisible: true,
 	}).go();
@@ -297,6 +285,8 @@ $(document).ready(function() {
 	typeIt();
 	// Object Images
 	objectFitImages("img.ofc");
+	// CHECK LAYOUT
+	checkLayout();
 	// MENU
 	showMenuMobile();
 	showSearchMobile();
@@ -311,10 +301,10 @@ $(document).ready(function() {
 	scrollToSologan();
 	// SLIDER
 	sliderHomeBanner();
-	sliderLeader();
 	sliderAchievement();
 	sliderProcutDetail();
 	sliderSameProduct();
 	// TAB
 	const tabGoogleMap = new Tab('.google-map .tab-container');
+	const tabProductDetail = new Tab('.tab-information .tab-container');
 })

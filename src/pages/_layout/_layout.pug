@@ -28,10 +28,11 @@ html(lang="en")
 			#progress
 		#fb-root
 		//- main content
-		block header
+		block headers
 			include _header.pug
 		main
 			block main
+			#js-page-verify(class=bodyClass hidden)
 		block footer
 			include _footer.pug
 		//- end main content
