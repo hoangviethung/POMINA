@@ -101,23 +101,10 @@ function activeMenuByUrl() {
 function showMenuMobile() {
 	$('.toggle-menu-mobile').click(function(e) {
 		e.preventDefault();
-		$(this).siblings('.search-mobile').find('.search').removeClass('active');
-		$(this).siblings('.search-mobile').find('.close').removeClass('active');
-
-		$('.top-header').removeClass('active');
-		$('.bottom-header').toggleClass('active');
-	});
-}
-
-// SHOW SEARCH MOBILE
-function showSearchMobile() {
-	$('.search-mobile').click(function(e) {
-		e.preventDefault();
-		$(this).find('.search').toggleClass('active');
-		$(this).find('.close').toggleClass('active');
-
-		$('.bottom-header').removeClass('active');
-		$('.top-header').toggleClass('active');
+		$(this).toggleClass('active');
+		$(this).siblings('.nav-list').toggleClass('active');
+		$('body').toggleClass('disabled');
+		$('.overlay').toggleClass('active');
 	});
 }
 
@@ -289,7 +276,6 @@ $(document).ready(function() {
 	checkLayout();
 	// MENU
 	showMenuMobile();
-	showSearchMobile();
 	activeMenuByUrl();
 	activeHeader();
 	// YOUTUBE
