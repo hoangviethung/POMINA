@@ -106,6 +106,12 @@ function showMenuMobile() {
 		$('body').toggleClass('disabled');
 		$('.overlay').toggleClass('active');
 	});
+
+	$('.overlay').click(function(e) {
+		e.preventDefault();
+		$(this).removeClass('active')
+		$('.nav-list').removeClass('active');
+	});
 }
 
 // SHOW BACK TO TOP

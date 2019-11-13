@@ -29,6 +29,10 @@ footer {
 
 				.list-phone {
 					margin-left: 25px;
+
+					.item-phone {
+						font-size: 14px;
+					}
 				}
 
 				&:last-child {
@@ -92,6 +96,54 @@ footer {
 			}
 		}
 	}
+
+	@media (max-width: 1024.98px) {
+		padding-top: 30px;
+
+		.title-footer {
+			font-size    : 20px;
+			margin-bottom: 15px;
+		}
+
+		.footer-about {
+			margin-bottom: 15px;
+
+			p {
+				font-size: 14px;
+			}
+		}
+
+		.footer-contact {
+			margin-bottom: 15px;
+
+			.list-item {
+				.item {
+					margin-bottom: 20px;
+
+					p {
+						margin-left: 15px;
+					}
+
+					.list-phone {
+						margin-left: 15px;
+					}
+				}
+			}
+		}
+
+		.footer-areas {
+			margin-bottom: 15px;
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+
+		.footer-about,
+		.footer-contact,
+		.footer-areas {
+			margin-bottom: 30px;
+		}
+	}
 }
 
 .copyright {
@@ -117,6 +169,14 @@ footer {
 						margin-right: 0;
 					}
 				}
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.list-item {
+			.item {
+				font-size: 12px;
 			}
 		}
 	}
