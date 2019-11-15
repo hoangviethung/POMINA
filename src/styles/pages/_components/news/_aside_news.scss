@@ -21,7 +21,7 @@
 
 					.icon {
 						background-image : url(../img/icons/icon-logo.svg);
-						width            :46px;
+						width            : 46px;
 						height           : 44px;
 						background-repeat: no-repeat;
 
@@ -66,22 +66,76 @@
 				}
 			}
 
-			&:hover {
+			@media (min-width: 1440px) {
+				&:hover {
+					figure {
+						.box-img {
+							img {
+								transform: scale(1.1);
+							}
+
+							.icon {
+								left          : 50%;
+								transform     : translate(-50%, -50%);
+								opacity       : 1;
+								pointer-events: visible;
+							}
+
+							&:after {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		margin: 0;
+
+		.list-same-news {
+			display  : flex;
+			flex-wrap: wrap;
+			margin   : 0 -10px;
+
+			.item {
+				flex         : 0 0 50%;
+				max-width    : 50%;
+				padding      : 0 10px;
+				border       : none;
+				margin-bottom: 20px;
+
+				figure {
+					figcaption {
+						.title-news {
+							margin-top: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.list-same-news {
+			margin    : 0;
+			background: #FFFFFF;
+			padding   : 20px 0;
+
+			.item {
+				flex     : 0 0 100%;
+				max-width: 100%;
+				padding  : 0;
+
 				figure {
 					.box-img {
-						img {
-							transform: scale(1.1);
-						}
+						height: 200px;
+					}
 
-						.icon {
-							left          : 50%;
-							transform     : translate(-50%, -50%);
-							opacity       : 1;
-							pointer-events: visible;
-						}
-
-						&:after {
-							opacity: 1;
+					figcaption {
+						.title-news {
+							font-size: 16px;
 						}
 					}
 				}

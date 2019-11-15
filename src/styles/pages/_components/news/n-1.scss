@@ -1,3 +1,12 @@
 .list-news {
 	margin-top: 60px;
+
+	@media (max-width: 1024.98px) {
+		margin-top: 0;
+		padding   : 50px 0 30px 0;
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 20px 0 10px 0;
+	}
 }

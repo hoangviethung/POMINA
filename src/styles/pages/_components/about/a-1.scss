@@ -1,3 +1,21 @@
+.title-about {
+	padding-bottom: 100px;
+	text-align    : center;
+	color         : #434343;
+
+	h3 {
+		font-size: 29px;
+	}
+
+	@media (max-width: 767.98px) {
+		padding-bottom: 15px;
+
+		h3 {
+			font-size: 18px;
+		}
+	}
+}
+
 .content-about {
 	padding          : 100px 0;
 	background-image : url(../img/about/bg-about.png);
@@ -81,30 +99,77 @@
 		overflow: hidden;
 		height  : 800px;
 	}
-}
 
-.title-about {
-	padding-bottom: 65px;
-	text-align    : center;
-	color         : #434343;
+	@media (max-width: 1024.98px) {
+		padding: 50px 0;
 
-	&.pb-100 {
-		padding-bottom: 100px;
-	}
+		.row {
+			margin: 0 -15px;
 
-	h3 {
-		font-size    : 29px;
-		margin-bottom: 20px;
+			.col-lg-6 {
+				padding: 0 15px;
+			}
+		}
 
-		&.mb-0 {
-			margin-bottom: 0;
+		span {
+			&.mt-70 {
+				display: none;
+			}
+		}
+
+		.title-content {
+			margin-bottom: 15px;
+
+			&:after {
+				content: none;
+			}
+		}
+
+		.desc {
+			height: auto;
+
+			p {
+				margin-bottom: 15px;
+
+				&.bold {
+					margin-bottom: 15px;
+				}
+			}
+
+			span {
+				display: none;
+			}
+		}
+
+		figure {
+			display: none;
 		}
 	}
 
-	p {
-		font-size: 17px;
-		width    : 25%;
-		margin   : 0 auto;
+	@media (max-width: 767.98px) {
+		padding: 25px 0;
+
+		.title-content {
+			h2 {
+				font-size: 18px;
+			}
+
+			span {
+				font-size: 16px;
+			}
+		}
+
+		.desc {
+			p {
+				font-size    : 14px;
+				margin-bottom: 10px;
+
+				&.bold {
+					font-size    : 14px;
+					margin-bottom: 10px;
+				}
+			}
+		}
 	}
 }
 
@@ -176,6 +241,47 @@
 			}
 		}
 	}
+
+	@media (max-width: 1024.98px) {
+		figure {
+			height: 250px;
+
+			figcaption {
+				display   : block;
+				text-align: center;
+
+				h5,
+				p {
+					font-size: 24px;
+				}
+
+				h5 {
+					padding-right: 0;
+
+					&:after {
+						content: none;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		figure {
+			height: 200px;
+
+			figcaption {
+				h5 {
+					margin-bottom: 10px;
+				}
+
+				h5,
+				p {
+					font-size: 16px;
+				}
+			}
+		}
+	}
 }
 
 .company-system {
@@ -188,6 +294,22 @@
 		img {
 			display: block;
 			margin : 0 auto;
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		padding: 50px 0;
+
+		figure {
+			margin: 0 50px;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 25px 0;
+
+		figure {
+			margin: 0 15px;
 		}
 	}
 }
@@ -217,6 +339,22 @@
 			left     : 50%;
 			transform: translate(-50%, -50%);
 			z-index  : 1;
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		figure {
+			height: 250px;
+
+			figcaption {
+				width: 90%;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		figure {
+			height: 200px;
 		}
 	}
 }
@@ -261,6 +399,30 @@
 			background-image: url(../img/icons/achievement-prev.svg);
 			left            : unset;
 			right           : 30px;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 25px 0;
+
+		figure {
+			margin: 0 35px;
+
+			.box-img {
+				height: auto;
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+
+		.slider-Achievement {
+
+			.swiper-button-next,
+			.swiper-button-prev {
+				display: none;
+			}
 		}
 	}
 }

@@ -111,6 +111,7 @@ function showMenuMobile() {
 		e.preventDefault();
 		$(this).removeClass('active')
 		$('.nav-list').removeClass('active');
+		$('.toggle-menu-mobile').toggleClass('active');
 	});
 }
 
@@ -174,7 +175,12 @@ function sliderAchievement() {
 			disableOnInteraction: false,
 		},
 		breakpoints: {
-
+			768: {
+				slidesPerView: 2
+			},
+			480: {
+				slidesPerView: 1
+			}
 		},
 		navigation: {
 			nextEl: '.slider-Achievement .swiper-button-next',
@@ -198,6 +204,13 @@ function sliderProcutDetail() {
 			nextEl: '.small-image .swiper-button-next',
 			prevEl: '.small-image .swiper-button-prev',
 		},
+		breakpoints: {
+			480: {
+				direction: 'horizontal',
+				slidesPerView: 3,
+				spaceBetween: 10
+			}
+		},
 	});
 
 	var images_Big = new Swiper('.slider-ProductDetail .big-image .swiper-container', {
@@ -211,6 +224,7 @@ function sliderProcutDetail() {
 		thumbs: {
 			swiper: images_Small,
 		},
+
 	});
 }
 
@@ -226,7 +240,13 @@ function sliderSameProduct() {
 			disableOnInteraction: false,
 		},
 		breakpoints: {
-
+			768: {
+				slidesPerView: 2,
+			},
+			480: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			}
 		},
 		navigation: {
 			nextEl: '.slider-SameProduct .swiper-button-next',
