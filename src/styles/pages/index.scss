@@ -138,6 +138,18 @@
 		}
 	}
 
+	@media (max-width: 1300px) {
+		.slider-HomeBanner {
+			figure {
+				figcaption {
+					bottom   : 30px;
+					left     : 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+
 	@media (max-width: 1024.98px) {
 		.slider-HomeBanner {
 			figure {

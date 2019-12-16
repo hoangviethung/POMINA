@@ -122,6 +122,14 @@ header {
 		}
 	}
 
+	@media (max-width:1300px) {
+		.nav-list {
+			.nav-item {
+				margin-right: 35px;
+			}
+		}
+	}
+
 	@media (max-width: 1024.98px) {
 		position        : fixed;
 		background-image: none;
