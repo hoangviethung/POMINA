@@ -85,20 +85,23 @@ header {
 		display : flex;
 
 		.nav-item {
-			user-select : none;
-			color       : #FFFFFF;
-			margin-right: 100px;
+			cursor        : pointer;
+			position      : relative;
+			user-select   : none;
+			color         : #FFFFFF;
+			margin-right  : 100px;
+			padding-bottom: 25px;
 
 			&:last-child {
-				position    : relative;
-				margin-right: 0;
+				margin-right  : 0;
+				padding-bottom: 0;
 
 				&:after {
 					content          : '';
 					background-image : url(../img/icons/arrow-select-white.svg);
 					position         : absolute;
 					left             : 37px;
-					top              : 50%;
+					top              : 25%;
 					transform        : translateY(-50%);
 					width            : 12px;
 					height           : 7px;
@@ -117,6 +120,38 @@ header {
 
 				option {
 					color: #000000;
+				}
+			}
+
+			@media (min-width: 1440px) {
+				&:hover {
+					.nav-sub {
+						opacity       : 1;
+						visibility    : visible;
+						pointer-events: visible;
+					}
+				}
+			}
+
+			.nav-sub {
+				opacity       : 0;
+				visibility    : hidden;
+				pointer-events: none;
+				position      : absolute;
+				top           : 48px;
+				padding       : 20px;
+				min-width     : 220px;
+				background    : #FFFFFF;
+				box-shadow    : 0 3px 6px rgba($color: #000000, $alpha: .16);
+				transition    : .3s all ease-in-out;
+
+				.item-sub {
+					color        : $main-color-1;
+					margin-bottom: 20px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
@@ -170,13 +205,13 @@ header {
 			transition: .3s all ease-in-out;
 
 			.nav-item {
-				margin-right: 0;
-				padding     : 20px;
-				color       : #000000;
+				padding: 0;
+				margin : 20px;
+				color  : #000000;
 
 				&:last-child {
 					&:after {
-
+						top             : 50%;
 						left            : 57px;
 						background-image: url(../img/icons/arrow-select.svg);
 					}
@@ -184,6 +219,17 @@ header {
 
 				select {
 					color: #000000;
+				}
+
+				.nav-sub {
+					position      : static;
+					pointer-events: visible;
+					opacity       : 1;
+					visibility    : visible;
+					margin-top    : 15px;
+					box-shadow    : none;
+					display       : none;
+					transition    : none;
 				}
 			}
 

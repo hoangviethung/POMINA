@@ -84,6 +84,13 @@ function activeHeader() {
 	});
 }
 
+function subMenu() {
+
+	$('.nav-item').on('click', function() {
+		$(this).find('.nav-sub').slideToggle();
+	});
+}
+
 // ACTIVE ITEM MENU BY URL
 function activeMenuByUrl() {
 	var url = window.location.href.split('/').pop();
@@ -304,6 +311,7 @@ $(document).ready(function() {
 	showMenuMobile();
 	activeMenuByUrl();
 	activeHeader();
+	subMenu();
 	// YOUTUBE
 	_getThumbnailYoutube();
 	// BACK TO TOP
