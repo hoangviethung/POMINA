@@ -84,7 +84,7 @@ header {
 		left    : 325px;
 		display : flex;
 
-		.nav-item {
+		>.nav-item {
 			cursor        : pointer;
 			position      : relative;
 			user-select   : none;
@@ -123,16 +123,6 @@ header {
 				}
 			}
 
-			@media (min-width: 1440px) {
-				&:hover {
-					.nav-sub {
-						opacity       : 1;
-						visibility    : visible;
-						pointer-events: visible;
-					}
-				}
-			}
-
 			.nav-sub {
 				opacity       : 0;
 				visibility    : hidden;
@@ -145,7 +135,7 @@ header {
 				box-shadow    : 0 3px 6px rgba($color: #000000, $alpha: .16);
 				transition    : .3s all ease-in-out;
 
-				.item-sub {
+				>.nav-item {
 					color        : $main-color-1;
 					margin-bottom: 20px;
 
@@ -154,12 +144,22 @@ header {
 					}
 				}
 			}
+
+			@media (min-width: 1025px) {
+				&:hover {
+					.nav-sub {
+						opacity       : 1;
+						visibility    : visible;
+						pointer-events: visible;
+					}
+				}
+			}
 		}
 	}
 
 	@media (max-width:1300px) {
 		.nav-list {
-			.nav-item {
+			>.nav-item {
 				margin-right: 35px;
 			}
 		}
@@ -204,7 +204,7 @@ header {
 			overflow-y: auto;
 			transition: .3s all ease-in-out;
 
-			.nav-item {
+			>.nav-item {
 				padding: 0;
 				margin : 20px;
 				color  : #000000;
