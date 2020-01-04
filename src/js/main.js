@@ -1,5 +1,5 @@
 // @import File Here !!!
-import map from "./map";
+import GGMapInit from "./map";
 
 // Function thêm class lazyload vào các thẻ <img> có thuộc tính [data-src]
 const addClassLazyload = () => {
@@ -298,7 +298,7 @@ function scrollToSologan() {
 
 $(document).ready(function() {
 	// GOOGLE MAP
-	map();
+	GGMapInit();
 	// WOW
 	new WOW().init();
 	// TYPE-IT
