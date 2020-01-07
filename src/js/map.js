@@ -100,42 +100,42 @@ module.exports = () => {
 		};
 
 		const showInfoMarkerOnMap = (marker, index) => {
-			google.maps.event.addListener(marker, 'click', function() {
-				// infoWindow.setContent(`
-				// 	<h3>${locations[index].name}</h3>
-				// 	<p>${locations[index].address}</p>
-				// 	<p>${locations[index].phone}</p>
-				// `);
-				itemClicked = index;
-				infoWindow.open(map, marker);
-				map.panTo(marker.getPosition());
-				map.setZoom(12);
-			})
+			// google.maps.event.addListener(marker, 'click', function() {
+			// 	infoWindow.setContent(`
+			// 		<h3>${locations[index].name}</h3>
+			// 		<p>${locations[index].address}</p>
+			// 		<p>${locations[index].phone}</p>
+			// 	`);
+			// 	itemClicked = index;
+			// 	infoWindow.open(map, marker);
+			// 	map.panTo(marker.getPosition());
+			// 	map.setZoom(12);
+			// })
 		};
 
-		const getLocationList = () => {
-			if (dealerLocatorList) {
-				dealerLocatorList.innerHTML = '';
-				markers.forEach((marker, index) => {
-					if (map.getBounds().contains(marker.getPosition())) {
-						const newMarker = document.createElement('div');
-						newMarker.classList.add('dealer-locator-item');
-					// 	newMarker.innerHTML = `
-					// 	<h3>${locations[index].name}</h3>
-					// 	<p>${locations[index].address}</p>
-					// 	<p>${locations[index].phone}</p>
-					// `;
-						newMarker.setAttribute('marker-id', `${index}`);
-						newMarker.addEventListener('click', () => {
-							itemClicked = index;
-							const markerIndex = newMarker.getAttribute('marker-id');
-							google.maps.event.trigger(markers[markerIndex], 'click');
-						});
-						dealerLocatorList.appendChild(newMarker);
-					}
-				});
-			}
-		};
+		// const getLocationList = () => {
+		// 	if (dealerLocatorList) {
+		// 		dealerLocatorList.innerHTML = '';
+		// 		markers.forEach((marker, index) => {
+		// 			if (map.getBounds().contains(marker.getPosition())) {
+		// 				const newMarker = document.createElement('div');
+		// 				newMarker.classList.add('dealer-locator-item');
+		// 			// 	newMarker.innerHTML = `
+		// 			// 	<h3>${locations[index].name}</h3>
+		// 			// 	<p>${locations[index].address}</p>
+		// 			// 	<p>${locations[index].phone}</p>
+		// 			// `;
+		// 				newMarker.setAttribute('marker-id', `${index}`);
+		// 				newMarker.addEventListener('click', () => {
+		// 					itemClicked = index;
+		// 					const markerIndex = newMarker.getAttribute('marker-id');
+		// 					google.maps.event.trigger(markers[markerIndex], 'click');
+		// 				});
+		// 				dealerLocatorList.appendChild(newMarker);
+		// 			}
+		// 		});
+		// 	}
+		// };
 
 		const initialize = () => {
 			map = new google.maps.Map(mapSelector, mapOption);
@@ -149,7 +149,7 @@ module.exports = () => {
 				google.maps.event.removeListener(listener);
 			});
 
-			google.maps.event.addListener(map, 'bounds_changed', getLocationList);
+			// google.maps.event.addListener(map, 'bounds_changed', getLocationList);
 		};
 
 		google.maps.event.addDomListener(window, 'load', initialize);
