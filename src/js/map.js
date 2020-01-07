@@ -101,11 +101,11 @@ module.exports = () => {
 
 		const showInfoMarkerOnMap = (marker, index) => {
 			google.maps.event.addListener(marker, 'click', function() {
-				infoWindow.setContent(`
-					<h3>${locations[index].name}</h3>
-					<p>${locations[index].address}</p>
-					<p>${locations[index].phone}</p>
-				`);
+				// infoWindow.setContent(`
+				// 	<h3>${locations[index].name}</h3>
+				// 	<p>${locations[index].address}</p>
+				// 	<p>${locations[index].phone}</p>
+				// `);
 				itemClicked = index;
 				infoWindow.open(map, marker);
 				map.panTo(marker.getPosition());
@@ -120,11 +120,11 @@ module.exports = () => {
 					if (map.getBounds().contains(marker.getPosition())) {
 						const newMarker = document.createElement('div');
 						newMarker.classList.add('dealer-locator-item');
-						newMarker.innerHTML = `
-						<h3>${locations[index].name}</h3>
-						<p>${locations[index].address}</p>
-						<p>${locations[index].phone}</p>
-					`;
+					// 	newMarker.innerHTML = `
+					// 	<h3>${locations[index].name}</h3>
+					// 	<p>${locations[index].address}</p>
+					// 	<p>${locations[index].phone}</p>
+					// `;
 						newMarker.setAttribute('marker-id', `${index}`);
 						newMarker.addEventListener('click', () => {
 							itemClicked = index;
