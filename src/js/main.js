@@ -296,6 +296,22 @@ function scrollToSologan() {
 	}
 }
 
+function ajaxFilerProduct() {
+	$('.filter select').on('change', function() {
+		const dataValue = $(this).val();
+		$.ajax({
+			type: "POST",
+			url: "/get-product",
+			data: {
+				params: dataValue,
+			},
+			success: function(res) {
+				$('.list-item').html(res)
+			}
+		});
+	})
+}
+
 $(document).ready(function() {
 	// GOOGLE MAP
 	GGMapInit();
@@ -327,4 +343,6 @@ $(document).ready(function() {
 	// TAB
 	const tabGoogleMap = new Tab('.google-map .tab-container');
 	const tabProductDetail = new Tab('.tab-information .tab-container');
+	// AJAX
+	ajaxFilerProduct();
 })
