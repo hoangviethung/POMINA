@@ -72,12 +72,17 @@
 		}
 	}
 
+	@media (max-width: 1200px) {
+		.box-form-contact {
+			width: 100%;
+		}
+	}
+
 	@media (max-width: 1024.98px) {
 		margin: 0 0 50px 0;
 
 		.box-form-contact {
 			margin-top: 50px;
-			width     : 100%;
 
 			form {
 				button {
