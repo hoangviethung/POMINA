@@ -303,7 +303,7 @@ function ajaxFilerProduct() {
 			type: "POST",
 			url: "/get-product",
 			data: {
-				params: dataValue,
+				text: dataValue,
 			},
 			success: function(res) {
 				$('.product-page .list-item').html(res)
