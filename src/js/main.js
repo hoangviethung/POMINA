@@ -306,7 +306,7 @@ function ajaxFilerProduct() {
 				params: dataValue,
 			},
 			success: function(res) {
-				$('.list-item').html(res)
+				$('.product-page .list-item').html(res)
 			}
 		});
 	})
