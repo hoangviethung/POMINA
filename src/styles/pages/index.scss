@@ -127,6 +127,8 @@
 			background-repeat: no-repeat;
 			z-index          : 1;
 			transition       : .3s all ease-in-out;
+
+
 		}
 
 		.swiper-button-next {
@@ -357,6 +359,10 @@
 			background-repeat: no-repeat;
 			z-index          : 1;
 			transition       : .3s all ease-in-out;
+
+			&.swiper-button-disabled {
+				display: none;
+			}
 		}
 
 		.swiper-button-next {

@@ -181,7 +181,6 @@ function sliderHomeProduct() {
 			disableOnInteraction: false,
 		},
 		simulateTouch: false,
-		loop: true,
 		navigation: {
 			nextEl: '.slider-HomeProduct .swiper-button-next',
 			prevEl: '.slider-HomeProduct .swiper-button-prev',
