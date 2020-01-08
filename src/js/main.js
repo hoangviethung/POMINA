@@ -171,6 +171,29 @@ function sliderHomeBanner() {
 	});
 }
 
+function sliderHomeProduct() {
+	var sliderHomeProduct = new Swiper('.slider-HomeProduct .swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 15,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		simulateTouch: false,
+		loop: true,
+		navigation: {
+			nextEl: '.slider-HomeProduct .swiper-button-next',
+			prevEl: '.slider-HomeProduct .swiper-button-prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2
+			},
+		},
+	})
+}
+
 // SLIDER Achievement (ABOUT PAGE)
 function sliderAchievement() {
 	var swpier = new Swiper('.slider-Achievement .swiper-container', {
@@ -337,6 +360,7 @@ $(document).ready(function() {
 	scrollToSologan();
 	// SLIDER
 	sliderHomeBanner();
+	sliderHomeProduct();
 	sliderAchievement();
 	sliderProcutDetail();
 	sliderSameProduct();

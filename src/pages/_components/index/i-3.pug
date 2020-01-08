@@ -14,24 +14,16 @@ section.index-3
 				.title.wow.fadeInDown(data-wow-delay=".2s")
 					h3 Our Production
 					p.limit-line Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book..orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				.list-item
-					.item.wow.fadeInDown(data-wow-delay=".2s")
-						a(href="#")
-							figure
-								img.ofc(src="./img/index-3/item-1.png", alt="", srcset="")
-								figcaption
-									h5 Roll Steel
-					.item.wow.fadeInDown(data-wow-delay=".4s")
-						a(href="#")
-							figure
-								img.ofc(src="./img/index-3/item-2.png", alt="", srcset="")
-								figcaption
-									h5 Color Steel
-									h5 Color
-					.item.wow.fadeInDown(data-wow-delay=".6s")
-						a(href="#")
-							figure
-								img.ofc(src="./img/index-3/item-3.png", alt="", srcset="")
-								figcaption
-									h5 Color Steel
+				.slider-HomeProduct
+					.swiper-container
+						.swiper-wrapper
+							-for(i=1;i<7;i++)
+								.swiper-slide
+									a(href="#")
+										figure
+											img.ofc(src="./img/products/"+i+".png", alt="", srcset="")
+											figcaption
+												h5.limit-line Roll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll SteelRoll Steel
+					.swiper-button-prev
+					.swiper-button-next
 				a.wow.flipInX.btn-new(href="#" data-wow-delay=".6s") VIEW ALL
