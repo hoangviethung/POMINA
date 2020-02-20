@@ -93,6 +93,8 @@ header {
 			margin-right  : 50px;
 			padding-bottom: 25px;
 
+
+
 			&:last-child {
 				margin-right  : 0;
 				padding-bottom: 0;
@@ -167,6 +169,10 @@ header {
 					color     : $main-color-1;
 					padding   : 20px;
 					transition: .3s all ease-in-out;
+
+					>a {
+						display: block;
+					}
 
 					&:last-child {
 						margin-bottom: 0;
