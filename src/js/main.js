@@ -380,5 +380,5 @@ $(document).ready(function() {
 	const tabGoogleMap = new Tab('.google-map .tab-container');
 	const tabProductDetail = new Tab('.tab-information .tab-container');
 	// AJAX
-	ajaxFilerProduct();
+	// ajaxFilerProduct();
 })
