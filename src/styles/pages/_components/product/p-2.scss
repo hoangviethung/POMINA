@@ -4,8 +4,7 @@
 	.overview {
 
 		.slider-ProductDetail {
-			display    : flex;
-			align-items: center;
+			display: flex;
 
 			.big-image {
 				flex        : 0 0 600px;
@@ -47,7 +46,7 @@
 					background-repeat: no-repeat;
 					background-size  : cover;
 					top              : unset;
-					bottom           : -30px;
+					bottom           : 0px;
 					width            : 14px;
 					height           : 8px;
 				}
