@@ -79,17 +79,18 @@ header {
 	}
 
 	.nav-list {
-		position: absolute;
-		top     : 60px;
-		left    : 325px;
-		display : flex;
+		position     : absolute;
+		display      : flex;
+		top          : 60px;
+		padding-right: 100px;
+		right        : 0;
 
 		>.nav-item {
 			cursor        : pointer;
 			position      : relative;
 			user-select   : none;
 			color         : #FFFFFF;
-			margin-right  : 100px;
+			margin-right  : 50px;
 			padding-bottom: 25px;
 
 			&:last-child {
@@ -107,7 +108,12 @@ header {
 					height           : 7px;
 					background-repeat: no-repeat;
 					background-size  : cover;
+					pointer-events   : none;
 				}
+			}
+
+			&.active {
+				color: $main-color-2;
 			}
 
 			select {
@@ -123,24 +129,54 @@ header {
 				}
 			}
 
+			&[submenu=true] {
+				&:after {
+					content          : '';
+					background-image : url(../img/icons/arrow-select-white.svg);
+					position         : absolute;
+					right            : -25px;
+					top              : 25%;
+					transform        : translateY(-50%);
+					width            : 12px;
+					height           : 7px;
+					background-repeat: no-repeat;
+					background-size  : cover;
+					transition       : .2s all ease-in-out;
+				}
+
+				&.show {
+					&:after {
+						transform: rotate(180deg);
+					}
+				}
+			}
+
 			.nav-sub {
 				opacity       : 0;
 				visibility    : hidden;
 				pointer-events: none;
 				position      : absolute;
 				top           : 48px;
-				padding       : 20px;
-				min-width     : 220px;
 				background    : #FFFFFF;
 				box-shadow    : 0 3px 6px rgba($color: #000000, $alpha: .16);
 				transition    : .3s all ease-in-out;
+				min-width     : 350px;
+				width         : 100%;
 
 				>.nav-item {
-					color        : $main-color-1;
-					margin-bottom: 20px;
+					color     : $main-color-1;
+					padding   : 20px;
+					transition: .3s all ease-in-out;
 
 					&:last-child {
 						margin-bottom: 0;
+					}
+
+					@media (min-width: 1025px) {
+						&:hover {
+							color     : #ffffff;
+							background: $main-color-1;
+						}
 					}
 				}
 			}
@@ -159,6 +195,8 @@ header {
 
 	@media (max-width:1300px) {
 		.nav-list {
+			padding-right: 10px;
+
 			>.nav-item {
 				margin-right: 35px;
 			}
@@ -221,6 +259,16 @@ header {
 					color: #000000;
 				}
 
+
+				&[submenu=true] {
+					&:after {
+						background-image: url(../img/icons/arrow-select.svg);
+						right           : unset;
+						top             : 10px;
+						left            : 150px;
+					}
+				}
+
 				.nav-sub {
 					position      : static;
 					pointer-events: visible;
@@ -230,6 +278,7 @@ header {
 					box-shadow    : none;
 					display       : none;
 					transition    : none;
+					min-width     : unset;
 				}
 			}
 

@@ -466,8 +466,13 @@ body {
 			}
 		}
 
+		@media (max-width: 1600px) {
+			.box-img {
+				height: auto;
+			}
+		}
 
-		@media (min-width: 1440px) {
+		@media (min-width: 1025px) {
 			&:hover {
 				.box-img {
 					&:after {
@@ -478,8 +483,6 @@ body {
 				figcaption {
 					opacity: 1;
 				}
-
-
 			}
 		}
 	}
@@ -917,7 +920,7 @@ body {
 		font-weight: 700;
 	}
 
-	@media (max-width: 1300px) {
+	@media (max-width: 1440px) {
 		width: unset;
 
 		figure {

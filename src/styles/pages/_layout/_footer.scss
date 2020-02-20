@@ -9,12 +9,6 @@ footer {
 		margin-bottom: 30px;
 	}
 
-	.footer-about {
-		p {
-			color: #6a6b70;
-		}
-	}
-
 	.footer-contact {
 		.list-item {
 			.item {
@@ -46,7 +40,7 @@ footer {
 		.list-item {
 			.item {
 				position     : relative;
-				color        : #eb1010;
+				color        : #ffffff;
 				margin-bottom: 20px;
 				padding-left : 35px;
 
@@ -70,7 +64,7 @@ footer {
 
 	.footer-send-mail {
 		p {
-			color        : #b8b8b8;
+			color        : #ffffff;
 			margin-bottom: 15px;
 		}
 
@@ -78,12 +72,16 @@ footer {
 			position: relative;
 
 			input {
-				color      : #737373;
+				color      : $main-color-1;
 				width      : 100%;
 				line-height: 45px;
 				padding    : 0 150px 0 20px;
 				border     : none;
 				box-shadow : none;
+
+				&::placeholder {
+					color: $main-color-1;
+				}
 			}
 
 			button {
@@ -92,9 +90,9 @@ footer {
 				position  : absolute;
 				top       : 0;
 				right     : 0;
-				background: #ff4600;
+				background: #dc3327;
 				border    : none;
-				color     : #322a28;
+				color     : #ffffff;
 			}
 		}
 	}

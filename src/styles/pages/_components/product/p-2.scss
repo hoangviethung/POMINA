@@ -192,6 +192,10 @@
 				width     : 100%;
 				text-align: center;
 
+				thead {
+					background: $main-color-1;
+				}
+
 				th,
 				td {
 					border   : 1px solid #707070;
@@ -200,7 +204,7 @@
 				}
 
 				th {
-					color: $main-color-2;
+					color: #ffffff;
 				}
 
 				td {

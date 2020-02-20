@@ -1,6 +1,6 @@
 // @import File Here !!!
 import GGMapInit from "./map";
-
+import Loading from "./loading";
 // Function thêm class lazyload vào các thẻ <img> có thuộc tính [data-src]
 const addClassLazyload = () => {
 	let imgList = document.querySelectorAll("img[data-src]")
@@ -84,18 +84,27 @@ function activeHeader() {
 	});
 }
 
-function subMenu() {
+function checkMenuHaveSub() {
+	$('.nav-list .nav-item .nav-sub').each(function() {
+		const itemHaveSub = $(this).parents('.nav-item')
+		itemHaveSub.attr('submenu', 'true');
+	})
+}
 
-	$('.nav-item').on('click', function() {
-		$(this).find('.nav-sub').slideToggle();
-	});
+function subMenu() {
+	if ($(window).width() < 1025) {
+		$('.nav-item').on('click', function() {
+			$(this).toggleClass('show');
+			$(this).find('.nav-sub').slideToggle();
+		});
+	}
 }
 
 // ACTIVE ITEM MENU BY URL
 function activeMenuByUrl() {
 	var url = window.location.href.split('/').pop();
 
-	let listNavItem = $('.bottom-header .nav-list .nav-item a');
+	let listNavItem = $('.nav-list .nav-item a');
 	listNavItem.each(function() {
 		let hung = $(this).attr('href');
 		if (url.includes(hung)) {
@@ -224,10 +233,9 @@ function sliderProcutDetail() {
 		direction: 'vertical',
 		spaceBetween: 20,
 		slidesPerView: 4,
-		freeMode: true,
-		loopedSlides: 5,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
+		loop: true,
+		observer: true,
+		observeParents: true,
 		slideToClickedSlide: true,
 		navigation: {
 			nextEl: '.small-image .swiper-button-next',
@@ -253,7 +261,10 @@ function sliderProcutDetail() {
 		thumbs: {
 			swiper: images_Small,
 		},
-
+		navigation: {
+			nextEl: '.small-image .swiper-button-next',
+			prevEl: '.small-image .swiper-button-prev',
+		}
 	});
 }
 
@@ -337,6 +348,7 @@ function ajaxFilerProduct() {
 $(document).ready(function() {
 	// GOOGLE MAP
 	GGMapInit();
+	Loading();
 	// WOW
 	new WOW().init();
 	// TYPE-IT
@@ -347,6 +359,7 @@ $(document).ready(function() {
 	checkLayout();
 	// MENU
 	showMenuMobile();
+	checkMenuHaveSub();
 	activeMenuByUrl();
 	activeHeader();
 	subMenu();
