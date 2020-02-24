@@ -960,9 +960,10 @@ body {
 			border     : 2px solid #ed2024;
 
 			.content {
-				margin  : 0 20px;
-				position: absolute;
-				top     : 280px;
+				margin    : 0 20px;
+				position  : absolute;
+				top       : 280px;
+				max-height: 130px;
 
 				h3 {
 					font-size    : 24px;
