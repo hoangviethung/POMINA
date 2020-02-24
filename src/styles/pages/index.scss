@@ -387,6 +387,17 @@
 				color             : $main-color-1;
 				font-size         : 24px;
 				-webkit-line-clamp: 1;
+				transition        : .3s all ease-in-out;
+			}
+		}
+
+		@media (min-width: 1025px) {
+			&:hover {
+				figcaption {
+					h5 {
+						color: #ed2024;
+					}
+				}
 			}
 		}
 	}
@@ -532,10 +543,11 @@
 					margin-top: 20px;
 
 					h5 {
-						position : relative;
-						font-size: 24px;
-						color    : $main-color-1;
-						padding  : 10px 0 10px 30px;
+						position          : relative;
+						font-size         : 24px;
+						color             : $main-color-1;
+						padding           : 10px 0 10px 30px;
+						-webkit-line-clamp: 2;
 
 						&:after {
 							content   : '';
@@ -567,6 +579,18 @@
 			.read-more {
 				margin-top : 50px;
 				margin-left: 30px;
+			}
+
+			@media (min-width: 1025px) {
+				&:hover {
+					figure {
+						figcaption {
+							h5 {
+								color: #ed2024;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

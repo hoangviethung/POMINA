@@ -185,6 +185,7 @@ function sliderHomeProduct() {
 		slidesPerView: 3,
 		spaceBetween: 15,
 		speed: 1000,
+		loop: true,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false,
