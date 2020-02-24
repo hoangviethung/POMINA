@@ -520,6 +520,10 @@
 
 		.item {
 			figure {
+				.box-img {
+					height: 300px;
+				}
+
 				figcaption {
 					margin-top: 20px;
 
@@ -568,6 +572,10 @@
 		.list-item {
 			.item {
 				figure {
+					.box-img {
+						height: 150px;
+					}
+
 					figcaption {
 						margin-top: 20px;
 
@@ -602,6 +610,12 @@
 		.list-item {
 			.item {
 				margin-bottom: 25px;
+
+				figure {
+					.box-img {
+						height: 200px;
+					}
+				}
 			}
 		}
 	}
