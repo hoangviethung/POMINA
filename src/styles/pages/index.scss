@@ -7,8 +7,8 @@
 			figcaption {
 				position : absolute;
 				max-width: 660px;
-				bottom   : 135px;
-				left     : 325px;
+				top      : 35%;
+				left     : 15%;
 
 				h3 {
 					color      : #ffffff;
@@ -144,9 +144,9 @@
 		.slider-HomeBanner {
 			figure {
 				figcaption {
-					bottom   : 30px;
-					left     : 50%;
-					transform: translateX(-50%);
+					h3 {
+						font-size: 45px;
+					}
 				}
 			}
 		}
@@ -158,9 +158,10 @@
 				height: auto;
 
 				figcaption {
-					left     : 50px;
-					bottom   : 50%;
-					transform: translateY(50%);
+					max-width: 460px;
+					left     : 10%;
+					top      : 50%;
+					transform: translateY(-50%);
 
 					h3 {
 						font-size: 35px;
@@ -188,7 +189,8 @@
 		.slider-HomeBanner {
 			figure {
 				figcaption {
-					left: 20px;
+					max-width: 320px;
+					left     : 20px;
 
 					h3 {
 						font-size    : 14px;
@@ -221,6 +223,8 @@
 		}
 
 		figure {
+			overflow: hidden;
+
 			figcaption {
 				h5 {
 					font-size  : 24px;
@@ -552,9 +556,10 @@
 					}
 
 					p {
-						margin-top  : 15px;
-						color       : #737373;
-						padding-left: 30px;
+						margin-top        : 15px;
+						color             : #737373;
+						padding-left      : 30px;
+						-webkit-line-clamp: 3;
 					}
 				}
 			}

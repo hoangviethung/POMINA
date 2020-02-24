@@ -408,10 +408,6 @@ body {
 		margin-top: 20px;
 		color     : $main-color-1;
 		font-size : 21px;
-
-		&.blue {
-			color: $main-color-2;
-		}
 	}
 
 	figure {
@@ -892,7 +888,9 @@ body {
 		border: 5px solid #ed2024;
 
 		.content {
-			padding: 30px;
+			margin    : 30px;
+			overflow  : hidden;
+			max-height: 225px;
 
 			h3 {
 				font-size: 30px;
@@ -962,7 +960,7 @@ body {
 			border     : 2px solid #ed2024;
 
 			.content {
-				padding : 0 20px;
+				margin  : 0 20px;
 				position: absolute;
 				top     : 280px;
 

@@ -84,7 +84,7 @@ header {
 		position     : absolute;
 		display      : flex;
 		top          : 60px;
-		padding-right: 100px;
+		padding-right: 150px;
 		right        : 0;
 
 		>.nav-item {
@@ -99,19 +99,19 @@ header {
 				margin-right  : 0;
 				padding-bottom: 0;
 
-				&:after {
-					content          : '';
-					background-image : url(../img/icons/arrow-select-white.svg);
-					position         : absolute;
-					left             : 37px;
-					top              : 25%;
-					transform        : translateY(-50%);
-					width            : 12px;
-					height           : 7px;
-					background-repeat: no-repeat;
-					background-size  : cover;
-					pointer-events   : none;
-				}
+				// &:after {
+				// 	content          : '';
+				// 	background-image : url(../img/icons/arrow-select-white.svg);
+				// 	position         : absolute;
+				// 	left             : 37px;
+				// 	top              : 25%;
+				// 	transform        : translateY(-50%);
+				// 	width            : 12px;
+				// 	height           : 7px;
+				// 	background-repeat: no-repeat;
+				// 	background-size  : cover;
+				// 	pointer-events   : none;
+				// }
 			}
 
 			&.active {
@@ -132,19 +132,19 @@ header {
 			}
 
 			&[submenu=true] {
-				&:after {
-					content          : '';
-					background-image : url(../img/icons/arrow-select-white.svg);
-					position         : absolute;
-					right            : -25px;
-					top              : 25%;
-					transform        : translateY(-50%);
-					width            : 12px;
-					height           : 7px;
-					background-repeat: no-repeat;
-					background-size  : cover;
-					transition       : .2s all ease-in-out;
-				}
+				// &:after {
+				// 	content          : '';
+				// 	background-image : url(../img/icons/arrow-select-white.svg);
+				// 	position         : absolute;
+				// 	right            : -25px;
+				// 	top              : 25%;
+				// 	transform        : translateY(-50%);
+				// 	width            : 12px;
+				// 	height           : 7px;
+				// 	background-repeat: no-repeat;
+				// 	background-size  : cover;
+				// 	transition       : .2s all ease-in-out;
+				// }
 
 				&.show {
 					&:after {

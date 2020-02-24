@@ -242,7 +242,7 @@ function sliderProcutDetail() {
 			prevEl: '.small-image .swiper-button-prev',
 		},
 		breakpoints: {
-			768: {
+			767: {
 				direction: 'horizontal',
 				slidesPerView: 3,
 				spaceBetween: 10

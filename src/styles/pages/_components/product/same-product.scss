@@ -51,6 +51,14 @@
 			padding  : 30px 0;
 			font-size: 24px;
 		}
+
+		.item-product {
+			figure {
+				.box-img {
+					height: 359px;
+				}
+			}
+		}
 	}
 
 	@media (max-width: 767.98px) {
@@ -63,10 +71,8 @@
 
 		.item-product {
 			figure {
-				margin: 0 25px;
-
 				.box-img {
-					height: 200;
+					height: 250px;
 				}
 			}
 		}
