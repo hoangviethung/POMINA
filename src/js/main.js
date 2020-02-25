@@ -125,7 +125,8 @@ function showMenuMobile() {
 
 	$('.overlay').click(function(e) {
 		e.preventDefault();
-		$(this).removeClass('active')
+		$(this).removeClass('active');
+		$('body').removeClass('disabled');
 		$('.nav-list').removeClass('active');
 		$('.toggle-menu-mobile').toggleClass('active');
 	});
