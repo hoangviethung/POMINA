@@ -152,9 +152,9 @@ function showBackToTop() {
 
 // SHOW FULL CONTENT ABOUT
 function showMoreContentAbout() {
-	$('.content-about span').click(function(e) {
+	$('.content-about .view-more').click(function(e) {
 		e.preventDefault();
-		console.log('OK');
+		$(this).hide();
 		$('.content-about .desc').toggleClass('show-more');
 	});
 }
