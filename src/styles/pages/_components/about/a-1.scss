@@ -94,10 +94,8 @@
 			}
 		}
 
-		span {
-			&.mt-70 {
-				display: none;
-			}
+		.view-more {
+			display: none;
 		}
 
 		.title-content {
@@ -110,10 +108,6 @@
 
 		.desc {
 			height: auto;
-
-			.view-more {
-				display: none;
-			}
 		}
 
 		figure {
@@ -131,6 +125,12 @@
 
 			span {
 				font-size: 16px;
+			}
+		}
+
+		.desc {
+			p {
+				font-size: 12px;
 			}
 		}
 	}
