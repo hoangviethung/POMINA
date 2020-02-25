@@ -94,6 +94,7 @@ header {
 			color         : #FFFFFF;
 			margin-right  : 50px;
 			padding-bottom: 25px;
+			transition    : .3s all ease-in-out;
 
 			&:last-child {
 				margin-right  : 0;
@@ -193,6 +194,8 @@ header {
 
 			@media (min-width: 1025px) {
 				&:hover {
+					color: $main-color-2;
+
 					.nav-sub {
 						opacity       : 1;
 						visibility    : visible;
