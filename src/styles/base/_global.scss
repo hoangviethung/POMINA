@@ -325,11 +325,11 @@ body {
 	}
 
 	p {
-		margin-top  : 25px;
-		font-size   : 16px;
-		padding-left: 35px;
-		color       : #737373;
-
+		margin-top        : 25px;
+		font-size         : 16px;
+		padding-left      : 35px;
+		color             : #737373;
+		text-align        : justify;
 		-webkit-line-clamp: 4;
 		max-height        : 100px;
 	}
@@ -910,6 +910,7 @@ body {
 				color             : #737373;
 				-webkit-line-clamp: 7;
 				max-height        : 168px;
+				text-align        : justify;
 			}
 		}
 	}
