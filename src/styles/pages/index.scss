@@ -266,10 +266,6 @@
 						font-size : 16px;
 						text-align: center;
 					}
-
-					p {
-						display: none;
-					}
 				}
 			}
 		}
@@ -277,6 +273,21 @@
 
 	@media (max-width: 767.98px) {
 		padding: 25px 0;
+
+		.list-item {
+			.item {
+				flex     : 0 0 100%;
+				max-width: 100%;
+			}
+
+			figure {
+				figcaption {
+					p {
+						font-size: 14px;
+					}
+				}
+			}
+		}
 	}
 
 }
