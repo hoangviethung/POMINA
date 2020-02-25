@@ -238,7 +238,7 @@ body {
 
 	h5 {
 		font-size   : 21px;
-		color       : #000000;
+		color       : #777777;
 		margin-right: 20px;
 	}
 
@@ -652,10 +652,11 @@ body {
 				h3 {
 					position          : relative;
 					font-size         : 21px;
-					color             : #434343;
+					color             : $main-color-1;
 					font-weight       : 700;
 					max-height        : 82px;
 					-webkit-line-clamp: 2;
+					transition        : .3s all ease-in-out;
 				}
 
 				hr {
@@ -696,6 +697,19 @@ body {
 				}
 			}
 		}
+	}
+
+	@media (min-width: 1025px) {
+		&:hover {
+			figure {
+				figcaption {
+					h3 {
+						color: $main-color-2;
+					}
+				}
+			}
+		}
+
 	}
 
 	@media (max-width: 1024.98px) {
