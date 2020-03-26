@@ -69,12 +69,12 @@
 	}
 
 	.desc {
-		height    : 370px;
-		overflow  : hidden;
+		max-height: 400px;
+		overflow-y: auto;
 		transition: .3s all ease-out;
 
 		&.show-more {
-			height: 623px;
+			max-height: unset;
 		}
 	}
 
@@ -107,7 +107,7 @@
 		}
 
 		.desc {
-			height: auto;
+			max-height: unset;
 		}
 
 		figure {

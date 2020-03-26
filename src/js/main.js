@@ -152,6 +152,10 @@ function showBackToTop() {
 
 // SHOW FULL CONTENT ABOUT
 function showMoreContentAbout() {
+	if ($('.content-about .desc').innerHeight() < 400) {
+		$('.content-about .view-more').hide();
+	};
+
 	$('.content-about .view-more').click(function(e) {
 		e.preventDefault();
 		$(this).hide();
