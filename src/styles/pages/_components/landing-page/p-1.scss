@@ -28,13 +28,61 @@ section.Landing-Page {
             z-index: -12;
         }
     }
+    .bg-sec-4 {
+        background: #0F518D;
+    }
     .landing__newProduct {
         padding-top: 95px;
         padding-bottom: 75px;
         position: relative;
     }
+    .landing__banner {
+        position: relative;
+        .countdown__time {
+            position: absolute;
+            top: 250px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            width: 30%;
+            .time__item {
+                width: 25%;
+                text-align: center;
+                position: relative;
+                &.no-bf {
+                    &::before {
+                        content: none;
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: 100%;
+                    width: 4px;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(95deg, #a1d3ea -86%, #fff -116%, #7db2cb 100%);
+                }
+            }
+            .number {
+                font-family: 'Montserrat-Bold';
+                font-size: 80px;
+                color: #0F518D;
+                line-height: 1;
+            }
+        }
+    }
     .banner__inner {
-        margin-top: -190px;
+        position: relative;
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: 423px;
+            content: '';
+            top: 0;
+            background: linear-gradient(180deg, #D9F0FF, #FFFFFF, #e0f3ff00);
+        }
+        padding-top: 100px;
         img {
             width: 100%;
             height: auto;
@@ -631,9 +679,17 @@ section.Landing-Page {
         }
     }
     .landingProject__inner {
+        .swiper-slide.swiper-slide-prev,
+        .swiper-slide.swiper-slide-next,
+        .swiper-slide.swiper-slide-active {
+            opacity: 1;
+        }
         .swiper-slide {
             opacity: .3;
         }
+    }
+    .landingProject__inner {
+        padding-bottom: 0;
     }
     .landingnHat__inner {
         padding: 50px 0;
@@ -658,6 +714,7 @@ section.Landing-Page {
     .landingnHat__body {
         display: flex;
         margin: 0 -45px;
+        padding: 50px 0;
         .body__item {
             -ms-flex: 0 0 50%;
             flex: 0 0 50%;
@@ -758,7 +815,7 @@ section.Landing-Page {
             }
         }
         .item__form {
-			padding: 50px 28px 42px;
+            padding: 50px 28px 42px;
             background: url(../img/landing/banner2.png);
             background-repeat: no-repeat;
             background-size: cover;
@@ -826,6 +883,32 @@ section.Landing-Page {
                     }
                 }
             }
+        }
+    }
+    .landing__footer {
+        .landingFooter__wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .landingFooter__social,
+        .landingFooter__copyright {
+            position: relative;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            display: flex;
+            align-items: center;
+            height: 100px;
+        }
+        .social__item {
+            padding: 10px;
+        }
+        .landingFooter__copyright {
+            font-family: 'hel-light';
+            justify-content: flex-end;
+            font-size: 17px;
+            color: white;
         }
     }
 }

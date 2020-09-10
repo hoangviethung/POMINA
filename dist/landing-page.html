@@ -14,41 +14,63 @@
 			<div id="progress"></div>
 		</div>
 		<div id="fb-root"></div>
-		<header language="en">
-			<div class="logo"><a href="index.html"></a></div>
-			<div class="logo-mobile"><a href="index.html"><img src="./img/logo-mobile-en.png" alt=""></a></div>
-			<div class="toggle-menu-mobile"></div>
-			<div class="nav-list">
-				<div class="nav-item"><a href="gioi-thieu.html">GIỚI THIỆU</a></div>
-				<div class="nav-item"><a href="san-pham.html">SẢN PHẨM</a>
-					<div class="nav-sub">
-						<div class="nav-item"><a href="san-pham-chi-tiet.html">Tôn lạnh Pomina AZ70/AZ100</a></div>
-						<div class="nav-item"><a href="san-pham-chi-tiet.html">Tôn lạnh Pomina SHIELD VIET AZ150</a></div>
-						<div class="nav-item"><a href="san-pham-chi-tiet.html">Tôn lạnh màu AZ50</a></div>
-						<div class="nav-item"><a href="san-pham-chi-tiet.html">Tôn lạnh màu Pomina SOLAR AZ100</a></div>
-						<div class="nav-item"><a href="san-pham-chi-tiet.html">Tôn lạnh màu Pomina SHIELD VIET AZ150</a></div>
+		<main>
+			<header class="custom" language="en">
+				<div class="logo"><a href="index.html"><img src="./img/icon-solar.png" alt=""></a></div>
+				<div class="logo-mobile"><a href="index.html"><img src="./img/icon-solar.png" alt=""></a></div>
+				<div class="toggle-menu-mobile"></div>
+				<div class="nav-list">
+					<div class="nav-item" data-scroll-to="1">
+						<h3>GIỚI THIỆU</h3>
+					</div>
+					<div class="nav-item" data-scroll-to="2">
+						<h3>SẢN PHẨM</h3>
+					</div>
+					<div class="nav-item" data-scroll-to="3">
+						<h3>DỰ ÁN</h3>
+					</div>
+					<div class="nav-item" data-scroll-to="4">
+						<h3>TIN TỨC</h3>
+					</div>
+					<div class="nav-item" data-scroll-to="5">
+						<h3>TUYỂN DỤNG</h3>
+					</div>
+					<div class="nav-item" data-scroll-to="6">
+						<h3>LIÊN HỆ</h3>
+					</div>
+					<div class="nav-item" data-scroll-to="7">
+						<h3>XX</h3>
 					</div>
 				</div>
-				<div class="nav-item"><a href="tin-tuc.html">DỰ ÁN</a></div>
-				<div class="nav-item"><a href="tin-tuc.html">TIN TỨC</a></div>
-				<div class="nav-item"><a href="tin-tuc.html">TUYỂN DỤNG</a></div>
-				<div class="nav-item"><a href="lien-he.html">LIÊN HỆ</a></div>
-				<div class="nav-item">
-					<select>
-						<option>EN</option>
-						<option>VN</option>
-					</select>
-				</div>
-			</div>
-		</header>
-		<main>
+			</header>
 			<section class="Landing-Page">
 				<div class="landing__banner">
 					<div class="banner__inner"><img src="./img/landing/banner.png" alt="banner"></div>
+					<div class="countdown__time">
+						<div class="date-over hidden">
+							<p>09/29/2020 23:59:59</p>
+						</div>
+						<div class="time__item no-bf">
+							<div class="txt"><span>NGÀY</span></div>
+							<div class="number" id="day"><span> </span></div>
+						</div>
+						<div class="time__item">
+							<div class="txt"><span>GIỜ</span></div>
+							<div class="number" id="hour"><span> </span></div>
+						</div>
+						<div class="time__item">
+							<div class="txt"><span>PHÚT</span></div>
+							<div class="number" id="minute"><span> </span></div>
+						</div>
+						<div class="time__item">
+							<div class="txt"><span>GIÂY</span></div>
+							<div class="number" id="second"><span> </span></div>
+						</div>
+					</div>
 				</div>
 				<div class="bg-sec-1">
 					<div class="container">
-						<div class="container-1520px landing__newProduct">
+						<div class="container-1520px landing__newProduct scroll-item" data-scroll-id="1">
 							<div class="landingnPro__inner">
 								<div class="landingnPro__img"><img src="./img/landing/video.png" alt=""></div>
 								<div class="landingnPro__content">
@@ -61,14 +83,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="container-1520px lading__structure">
+						<div class="container-1520px lading__structure scroll-item" data-scroll-id="2">
 							<div class="landingS__inner">
 								<h2>Cấu trúc sản phẩm</h2>
 								<div class="img"><img src="./img/landing/cautruc.png" alt="cautruc"></div>
 								<h2>Đặc tính nổi bật</h2>
 							</div>
 						</div>
-						<div class="container-1120px lading__highlight">
+						<div class="container-1120px lading__highlight scroll-item" data-scroll-id="3">
 							<div class="landingH__inner">
 								<div class="landingH__list">
 									<div class="landingH__item">
@@ -126,7 +148,7 @@
 				</div>
 				<div class="bg-sec-2">
 					<div class="container">
-						<div class="landing__compare">
+						<div class="landing__compare scroll-item" data-scroll-id="4">
 							<div class="compare__wrapper">
 								<h2>Sự khác biệt giữa tôn lạnh thông thường và tôn lạnh Solar - 2 lớp cực mát</h2>
 								<div class="compare__table">
@@ -165,7 +187,7 @@
 				</div>
 				<div class="bg-sec-1">
 					<div class="container">
-						<div class="container-1520px landing__newProduct">
+						<div class="container-1520px landing__newProduct scroll-item" data-scroll-id="5">
 							<div class="landingnPro__inner custom">
 								<div class="landingnPro__img"><img src="./img/landing/video.png" alt=""></div>
 								<div class="landingnPro__content">
@@ -178,7 +200,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="container-1520px landing__news">
+						<div class="container-1520px landing__news scroll-item" data-scroll-id="6">
 							<div class="landingNews__inner">
 								<h2>báo chí nói gì về tôn lạnh solar - 2 lớp cực mát?</h2>
 								<div class="landingNews__list">
@@ -224,7 +246,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="container-1520px landing__feel">
+						<div class="container-1520px landing__feel scroll-item" data-scroll-id="7">
 							<div class="landingFeel__inner">
 								<h2>Cảm nhận của đại lý</h2>
 								<div class="landingFeel__list">
@@ -261,7 +283,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="container-1520px landing__feelCustom">
+						<div class="container-1520px landing__feelCustom scroll-item" data-scroll-id="8">
 							<div class="landingFCustom__inner">
 								<h2>cảm nhận của khách hàng</h2>
 								<div class="swiper-container">
@@ -342,7 +364,7 @@
 								<div class="swiper-button-prev"></div>
 							</div>
 						</div>
-						<div class="container-1520px landing__project">
+						<div class="container-1520px landing__project scroll-item" data-scroll-id="9">
 							<div class="landingProject__inner">
 								<h2>dự án sử dụng tôn lạnh solar - 2 lớp cực mát</h2>
 							</div>
@@ -429,7 +451,7 @@
 				</div>
 				<div class="bg-sec-2">
 					<div class="container">
-						<div class="container-1120px landing__newHat">
+						<div class="container-1120px landing__newHat scroll-item" data-scroll-id="10">
 							<div class="landingnHat__inner">
 								<div class="landingnHat__head">
 									<div class="head__img"><img src="./img/landing/bangroll.png" alt=""></div>
@@ -465,7 +487,7 @@
 				</div>
 				<div class="bg-sec-3">
 					<div class="container">
-						<div class="container-1385px landing__form">
+						<div class="container-1385px landing__form scroll-item" data-scroll-id="11">
 							<div class="landingForm__inner">
 								<div class="landingForm__list">
 									<div class="landingForm__item">
@@ -521,7 +543,7 @@
 												</div>
 												<div class="btn__send" data-url="lienhe">
 													<div class="txt">
-														<h3>Liên hệ </h3>
+														<h3>Liên hệ</h3>
 													</div>
 												</div>
 											</form>
@@ -532,68 +554,25 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<div id="js-page-verify" hidden></div>
-		</main>
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-6 footer-contact">
-						<div class="title-footer">Contacts</div>
-						<ul class="list-item">
-							<div class="item"><img src="./img/icons/address.svg" alt="">
-								<p>No. 1B St., Phu My 1 Industrial Phu My Town, Ba ria - Vung Tau</p>
+				<div class="bg-sec-4">
+					<div class="container">
+						<div class="container-1385px landing__footer">
+							<div class="landingFooter__wrapper">
+								<div class="landingFooter__social">
+									<div class="social__item"><a href=""><img src="./img/landing/facebook.png" alt="fb"></a></div>
+									<div class="social__item"><a href=""><img src="./img/landing/instagram.png" alt="fb"></a></div>
+									<div class="social__item"><a href=""><img src="./img/landing/youtube.png" alt="fb"></a></div>
+								</div>
+								<div class="landingFooter__copyright">
+									<p>Copyright ©2020 Pomina Flat Steel All right reserved</p>
+								</div>
 							</div>
-							<div class="item"><img src="./img/icons/gmail.svg" alt="">
-								<p>kinhdoanh@pomina-flat-steel.com</p>
-							</div>
-							<div class="item"><img src="./img/icons/phone.svg" alt="">
-								<ul class="list-phone">
-									<li class="item-phone">+84) (254) 3922 516</li>
-									<li class="item-phone">(+84) (254) 3893 498</li>
-								</ul>
-							</div>
-						</ul>
-					</div>
-					<div class="col-lg-4 col-md-6 footer-areas">
-						<div class="title-footer">Areas of work</div>
-						<ul class="list-item">
-							<li class="item"><a href="#">Pomina Flat Steel</a></li>
-							<li class="item"><a href="#">Pomina Flat Steel</a></li>
-							<li class="item"><a href="#">Pomina Flat Steel</a></li>
-							<li class="item"><a href="#">Pomina Flat Steel</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-4 footer-send-mail">
-						<div class="title-footer">Newsletters</div>
-						<p>Subcribe to our newletter to receive updates on our company's products , news, and special offers.</p>
-						<form action="#" method="method">
-							<div class="form-group">
-								<input type="email" placeholder="Enter your e-mail">
-								<button>SUBSCRIBE</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<div class="copyright">
-			<div class="container">
-				<div class="list-item">
-					<div class="item"><span>Copyright ©2020 Pomina Flat Steel. All right reserved.</span></div>
-					<div class="item">
-						<div class="list-social-media">
-							<div class="item-social"><a href="#"><img src="./img/icons/facebook.svg" alt="" srcset=""></a></div>
-							<div class="item-social"><a href="#"><img src="./img/icons/youtube.svg" alt="" srcset=""></a></div>
-							<div class="item-social"><a href="#"><img src="./img/icons/youtube.svg" alt="" srcset=""></a></div>
-							<div class="item-social"><a href="#"><img src="./img/icons/vimeo.svg" alt="" srcset=""></a></div>
-							<div class="item-social"><a href="#"><img src="./img/icons/google.svg" alt="" srcset=""></a></div>
-							<div class="item-social"><a href="#"><img src="./img/icons/rss.svg" alt="" srcset=""></a></div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</section>
+			<div id="js-page-verify" hidden></div>
+		</main>
 		<div id="back-to-top"></div>
 		<div class="overlay"></div>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&amp;key=AIzaSyCHvmyTralDp2Y0m7zEiN185u1vtArcC5s&amp;libraries=places"></script>

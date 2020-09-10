@@ -2,9 +2,32 @@ section.Landing-Page
 	.landing__banner
 		.banner__inner
 			img(src="./img/landing/banner.png", alt="banner")
+		.countdown__time
+			.date-over.hidden
+				p 09/29/2020 23:59:59
+			.time__item.no-bf
+				.txt
+					span NGÀY
+				.number#day
+					span 
+			.time__item
+				.txt
+					span GIỜ
+				.number#hour
+					span 
+			.time__item
+				.txt
+					span PHÚT
+				.number#minute
+					span 
+			.time__item
+				.txt
+					span GIÂY
+				.number#second
+					span 
 	.bg-sec-1
 		.container
-			.container-1520px.landing__newProduct
+			.container-1520px.landing__newProduct.scroll-item(data-scroll-id="1")
 				.landingnPro__inner
 					.landingnPro__img
 						img(src="./img/landing/video.png", alt="")
@@ -13,13 +36,13 @@ section.Landing-Page
 							.txt
 								h3 Sản phẩm mới mang lại
 								p Với lớp phủ siêu bảo vệ Pomina Crystal đặc biệt dành riêng cho khí hậu Việt Nam nhất là ở những vùng biển, sông nước, vùng nước nhiễm mặn, nhiễm phèn, Tôn lạnh Solar 2 lớp cực mát ngăn chặn mọi yếu tố gây phá hủy cấu trúc tôn, đem đến vẻ đẹp, và độ bền gấp 3 lần tôn thông thường.
-			.container-1520px.lading__structure
+			.container-1520px.lading__structure.scroll-item(data-scroll-id="2")
 				.landingS__inner
 					h2 Cấu trúc sản phẩm
 					.img
 						img(src="./img/landing/cautruc.png", alt="cautruc")
 					h2 Đặc tính nổi bật
-			.container-1120px.lading__highlight
+			.container-1120px.lading__highlight.scroll-item(data-scroll-id="3")
 				.landingH__inner
 					.landingH__list
 						.landingH__item
@@ -56,7 +79,7 @@ section.Landing-Page
 									p Lớp phủ Pomina Crystal giúp bền màu và chống gỉ sét, giảm khả năng hấp thụ nhiệt tối đa, mang lại không gian mát mẻ cho mọi công trình. 
 	.bg-sec-2
 		.container
-			.landing__compare
+			.landing__compare.scroll-item(data-scroll-id="4")
 				.compare__wrapper
 					h2 Sự khác biệt giữa tôn lạnh thông thường và tôn lạnh Solar - 2 lớp cực mát
 					.compare__table
@@ -80,7 +103,7 @@ section.Landing-Page
 								p Mái tôn bền gấp 3 lần loại tôn thông thường, bảo hành lên đến 15 năm
 	.bg-sec-1
 		.container
-			.container-1520px.landing__newProduct
+			.container-1520px.landing__newProduct.scroll-item(data-scroll-id="5")
 				.landingnPro__inner.custom
 					.landingnPro__img
 						img(src="./img/landing/video.png", alt="")
@@ -89,7 +112,7 @@ section.Landing-Page
 							.txt
 								h3 hành trình hợp tác cùng Tập đoàn akzonobel
 								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			.container-1520px.landing__news
+			.container-1520px.landing__news.scroll-item(data-scroll-id="6")
 				.landingNews__inner
 					h2 báo chí nói gì về tôn lạnh solar - 2 lớp cực mát?
 					.landingNews__list
@@ -107,7 +130,7 @@ section.Landing-Page
 											span 13.08.2020
 										.cnt__desc
 											p “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
-			.container-1520px.landing__feel
+			.container-1520px.landing__feel.scroll-item(data-scroll-id="7")
 				.landingFeel__inner
 					h2 Cảm nhận của đại lý
 					.landingFeel__list
@@ -120,7 +143,7 @@ section.Landing-Page
 											img(src="./img/landing/new.png", alt="")
 								.feel__content
 									p Lorem ipsum dolor sit amet, consectetuer elit adipiscing elit. Lorem ipsum dolor sit.
-			.container-1520px.landing__feelCustom
+			.container-1520px.landing__feelCustom.scroll-item(data-scroll-id="8")
 				.landingFCustom__inner
 					h2 cảm nhận của khách hàng
 					.swiper-container
@@ -135,7 +158,7 @@ section.Landing-Page
 												p Quá bất ngờ khi thị trường có dòng tôn dành riêng cho vùng biển, giờ tôi đã an tâm lợp mái nhà mới bằng Tôn lạnh Solar - 2 lớp cực mát.
 					.swiper-button-next
 					.swiper-button-prev
-			.container-1520px.landing__project
+			.container-1520px.landing__project.scroll-item(data-scroll-id="9")
 				.landingProject__inner
 					h2 dự án sử dụng tôn lạnh solar - 2 lớp cực mát
 		.landingProject__inner
@@ -153,7 +176,7 @@ section.Landing-Page
 			.swiper-button-prev.custom
 	.bg-sec-2
 		.container
-			.container-1120px.landing__newHat
+			.container-1120px.landing__newHat.scroll-item(data-scroll-id="10")
 				.landingnHat__inner
 					.landingnHat__head
 						.head__img
@@ -180,7 +203,7 @@ section.Landing-Page
 									h3 PROMOTION
 	.bg-sec-3
 		.container
-			.container-1385px.landing__form
+			.container-1385px.landing__form.scroll-item(data-scroll-id="11")
 				.landingForm__inner
 					.landingForm__list
 						.landingForm__item
@@ -223,4 +246,21 @@ section.Landing-Page
 											textarea(name="", cols="30", rows="10",placeholder="Nội dung")
 									.btn__send(data-url="lienhe")
 										.txt
-											h3 Liên hệ 
+											h3 Liên hệ
+	.bg-sec-4
+		.container
+			.container-1385px.landing__footer
+				.landingFooter__wrapper
+					.landingFooter__social
+						.social__item
+							a(href="")
+								img(src="./img/landing/facebook.png", alt="fb")
+						.social__item
+							a(href="")
+								img(src="./img/landing/instagram.png", alt="fb")
+						.social__item
+							a(href="")
+								img(src="./img/landing/youtube.png", alt="fb")
+					.landingFooter__copyright
+						p Copyright ©2020 Pomina Flat Steel All right reserved
+

@@ -393,6 +393,74 @@ function slideFeelCustom() {
     })
 }
 
+function scrollToSection() {
+    $('[data-scroll-to]').on('click', function(e) {
+        e.preventDefault();
+        const scrollToNumber = $(this).attr('data-scroll-to');
+        $('html,body').animate({
+                scrollTop: $(`[data-scroll-id="${scrollToNumber}"]`).offset().top -
+                    $('header').height(),
+            },
+            1200
+        );
+        $('header .nav-item').removeClass('active');
+        $('#overlay').removeClass('active');
+        $('body').removeClass('disabled');
+    });
+
+    const activeSectionWhenScroll = () => {
+        $('[data-scroll-id]').each(function() {
+            if (
+                this.getBoundingClientRect().top < 2 * $('header').height() &&
+                this.getBoundingClientRect().top > 0
+            ) {
+                const toId = $(this).attr('data-scroll-id');
+                $(`header [data-scroll-to]`).removeClass('active');
+                $(`header [data-scroll-to="${toId}"]`).addClass('active');
+                if (toId == '1') {
+                    sliderMenu().update();
+                }
+                sliderMenu().slideTo(Number(toId) - 1);
+            }
+        });
+    };
+
+    activeSectionWhenScroll();
+    $(window).on('scroll', function() {
+        activeSectionWhenScroll();
+    });
+};
+
+function countDownSale() {
+    // Set the date we're counting down to
+    var temp = document.querySelector(".date-over p");
+    if (temp) {
+        var dateEND = new Date(temp.textContent).getTime();
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+            // Get today's date and time
+            var now = new Date().getTime();
+            // Find the distance between now and the count down date
+            var distance = dateEND - now;
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours =
+                Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Display the result in the element
+            try {
+                document.getElementById("day").innerHTML = days;
+                document.getElementById("hour").innerHTML = hours;
+                document.getElementById("minute").innerHTML = minutes;
+                document.getElementById("second").innerHTML = seconds;
+                // If the count down is finished, write some text
+                if (distance < 0) {}
+            } catch (error) {}
+        }, 1000);
+    }
+}
+
 $(document).ready(function() {
     // GOOGLE MAP
     GGMapInit();
@@ -425,6 +493,8 @@ $(document).ready(function() {
     sliderProcutDetail();
     sliderSameProduct();
     slideFeelCustom();
+    scrollToSection();
+    countDownSale();
     // TAB
     const tabGoogleMap = new Tab('.google-map .tab-container');
     const tabProductDetail = new Tab('.tab-information .tab-container');
