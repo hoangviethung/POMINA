@@ -115,21 +115,24 @@ section.Landing-Page
 			.container-1520px.landing__news.scroll-item(data-scroll-id="6")
 				.landingNews__inner
 					h2 báo chí nói gì về tôn lạnh solar - 2 lớp cực mát?
-					.landingNews__list
-						-for(var i =1;i<4;i++)
-							.landing__item
-								a.item__inner(href="")
-									.item__img
-										img(src="./img/landing/new.png", alt="")
-									.item__content
-										.cnt__title
-											h3 Lorem ipsum dolor sit amet, sit amet #{i}
-										.cnt__date
-											.img
-												img(src="./img/landing/calendar.png", alt="calendar")
-											span 13.08.2020
-										.cnt__desc
-											p “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+					.swiper-container
+						.swiper-wrapper
+							-for(var i =1;i<4;i++)
+								.landing__item.swiper-slide
+									a.item__inner(href="")
+										.item__img
+											img(src="./img/landing/new.png", alt="")
+										.item__content
+											.cnt__title
+												h3 Lorem ipsum dolor sit amet, sit amet #{i}
+											.cnt__date
+												.img
+													img(src="./img/landing/calendar.png", alt="calendar")
+												span 13.08.2020
+											.cnt__desc
+												p “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+					.swiper-button-next
+					.swiper-button-prev
 			.container-1520px.landing__feel.scroll-item(data-scroll-id="7")
 				.landingFeel__inner
 					h2 Cảm nhận của đại lý
@@ -137,10 +140,10 @@ section.Landing-Page
 						-for(var i =1;i<4;i++)
 							.landingFeel__item
 								.feel__icon
-									.icon__img
-										img(src="./img/landing/icon-x.png", alt="calendar")
-										.img
-											img(src="./img/landing/new.png", alt="")
+									//- .icon__img
+									//- 	img(src="./img/landing/icon-x.png", alt="calendar")
+									.img
+										img(src="./img/landing/new.png", alt="")
 								.feel__content
 									p Lorem ipsum dolor sit amet, consectetuer elit adipiscing elit. Lorem ipsum dolor sit.
 			.container-1520px.landing__feelCustom.scroll-item(data-scroll-id="8")
@@ -151,7 +154,7 @@ section.Landing-Page
 							-for(var i =1;i<8;i++)
 								.swiper-slide
 									.landingFCustom__item
-										.item__img
+										.item__img(data-img="")
 											img(src="./img/landing/new.png", alt="new")
 										.item__content
 											.txt
