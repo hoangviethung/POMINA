@@ -172,12 +172,19 @@ section.Landing-Page {
 			.landingnPro__content {
 				padding-right: unset;
 				margin-right: -10px;
+				margin-left: 8px;
 				order: 1;
 				.content__inner {
 					padding: 0 50px;
 					.txt {
 						h3 {
-							padding-right: 230px;
+							margin-right: 150px;
+							@media(max-width: 1600px) {
+								margin-right: 0;
+							}
+							@media(max-width:1300px) {
+								font-size: 24px;
+							}
 						}
 					}
 				}
