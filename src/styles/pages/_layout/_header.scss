@@ -7,6 +7,13 @@ header {
     height: 226px;
     z-index: 100;
     &.custom {
+        .nav-item {
+            margin-right: 20px !important;
+            >h3 {
+                font-family: 'hel-regular';
+                font-size: 18px;
+            }
+        }
         .nav-list {
             top: 40px;
         }
@@ -17,6 +24,11 @@ header {
         background-image: url(../img/landing/bg-header.png);
         &[language='en'] {
             background-image: url(../img/landing/bg-header.png);
+        }
+        @media (max-width: 1024.98px) {
+            .logo-mobile {
+                left: 58%;
+            }
         }
         @media (max-width: 1024.98px) {
             position: fixed;

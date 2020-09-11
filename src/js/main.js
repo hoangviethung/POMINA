@@ -354,10 +354,10 @@ function ajaxFilerProduct() {
 function slideFeelCustom() {
     const form = new Swiper('.landingFCustom__inner .swiper-container', {
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 28,
         speed: 1000,
         breakpoints: {
-			1025: {
+            1025: {
                 slidesPerView: 2
             },
             768: {
@@ -378,10 +378,10 @@ function slideFeelCustom() {
         centeredSlides: true,
         loop: true,
         cssMode: true,
-        spaceBetween: 20,
+        spaceBetween: 28,
         speed: 1000,
         breakpoints: {
-			1025: {
+            1025: {
                 slidesPerView: 2
             },
             768: {
@@ -468,7 +468,7 @@ function countDownSale() {
 }
 const talkingNews = () => {
     const form = new Swiper('.landingNews__inner .swiper-container', {
-        spaceBetween: 20,
+        spaceBetween: 40,
         speed: 1000,
         slidesPerView: 3,
         breakpoints: {
@@ -491,7 +491,7 @@ const talkingNews = () => {
 }
 const swiperFeel = () => {
     const form = new Swiper('.landing__feel .swiper-container', {
-        spaceBetween: 20,
+        spaceBetween: 28,
         speed: 1000,
         slidesPerView: 3,
         loop: true,
@@ -555,11 +555,11 @@ function ajaxContactForm() {
     });
 }
 const toggleMobileNav = () => {
-	if(document.querySelector(".menu-fixed")) {
-		$(".mobile-tool").on("click" , function() {
-			$(this).toggleClass("show");
-		})
-	}
+    if (document.querySelector(".menu-fixed")) {
+        $(".mobile-tool").on("click", function() {
+            $(this).toggleClass("show");
+        })
+    }
 }
 
 $(document).ready(function() {
@@ -597,8 +597,8 @@ $(document).ready(function() {
     scrollToSection();
     countDownSale();
     talkingNews();
-	swiperFeel();
-	toggleMobileNav();
+    swiperFeel();
+    toggleMobileNav();
     // TAB
     const tabGoogleMap = new Tab('.google-map .tab-container');
     const tabProductDetail = new Tab('.tab-information .tab-container');
