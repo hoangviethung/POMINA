@@ -358,7 +358,7 @@ function slideFeelCustom() {
         speed: 1000,
         breakpoints: {
             768: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             480: {
                 slidesPerView: 1,
@@ -379,7 +379,7 @@ function slideFeelCustom() {
         speed: 1000,
         breakpoints: {
             768: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             480: {
                 slidesPerView: 1,
@@ -470,7 +470,7 @@ const talkingNews = () => {
                 slidesPerView: 3
             },
             768: {
-                slidesPerView: 2
+                slidesPerView: 1
             },
             480: {
                 slidesPerView: 1,
@@ -548,6 +548,13 @@ function ajaxContactForm() {
         }
     });
 }
+const toggleMobileNav = () => {
+	if(document.querySelector(".menu-fixed")) {
+		$(".mobile-tool").on("click" , function() {
+			$(this).toggleClass("show");
+		})
+	}
+}
 
 $(document).ready(function() {
     // GOOGLE MAP
@@ -584,7 +591,8 @@ $(document).ready(function() {
     scrollToSection();
     countDownSale();
     talkingNews();
-    swiperFeel();
+	swiperFeel();
+	toggleMobileNav();
     // TAB
     const tabGoogleMap = new Tab('.google-map .tab-container');
     const tabProductDetail = new Tab('.tab-information .tab-container');
