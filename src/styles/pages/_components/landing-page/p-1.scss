@@ -234,7 +234,10 @@
                                 }
                                 @media(max-width:1300px) {
                                     font-size: 20px;
-                                }
+								}
+								@media (max-width:575.98px) {
+									font-size: 15px;
+								}
                             }
                         }
                         @media(max-width: 874px) {
@@ -323,7 +326,10 @@
                     }
                     @media (max-width: 1024px) {
                         font-size: 20px;
-                    }
+					}
+					@media (max-width: 575.98px) {
+						font-size: 15px;
+					}
                 }
                 p {
                     font-family: 'hel-regular';
@@ -977,7 +983,10 @@
             }
         }
         .landingProject__inner {
-            padding-bottom: 0;
+			padding-bottom: 0;
+			@media(max-width: 575.98px) {
+				padding: 10px;
+			}
         }
         .landingnHat__inner {
             padding: 50px 0;
@@ -1253,7 +1262,7 @@
 			}
 			img {
 				width: 40px;
-				height: 40px;
+				height: 29px;
 			}
 			.mobile-tool {
 				display: none;
@@ -1272,6 +1281,7 @@
 				a {
 					opacity: 0;
 					height: 0;
+					margin-bottom: 0;
 					pointer-events: none;
 				}
 				
@@ -1297,6 +1307,7 @@
 							height: 80px;
 							opacity: 1;
 							pointer-events: all;
+							margin-bottom: 10px;
 						}
 					}
 				}
@@ -1305,13 +1316,17 @@
 				width: 50px;
 				.mobile-tool { 
 					height: 50px;
-				}
-				a {
-					height: 50px;
+					&.show {
+						~ a {
+							height: 50px;
+							opacity: 1;
+							pointer-events: all;
+						}
+					}
 				}
 				img {
 					width: 30px;
-					height: 30px;
+					height: 20px;
 				}
 			}
 		}
