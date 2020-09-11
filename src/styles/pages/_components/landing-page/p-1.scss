@@ -336,10 +336,10 @@
                     span {
                         font-family: 'hel-bold';
                         color: #1D6D7F;
-					}
-					@media(max-width:1024.98px) {
-						font-size: 12px;
-					}
+                    }
+                    @media(max-width:1024.98px) {
+                        font-size: 12px;
+                    }
                 }
             }
             @media(max-width: 767.98px) {
@@ -362,6 +362,17 @@
         }
         .landingH__inner {
             margin-top: 60px;
+            position: relative;
+            &:first-child {
+                position: absolute;
+                content: '';
+                background: url(../img/landing/house.png);
+                background-repeat: no-repeat;
+                width: 520px;
+                height: 520px;
+                top: 60%;
+                left: 0;
+            }
         }
         .landingH__item {
             display: flex;
@@ -656,13 +667,13 @@
         }
         .landingNews__inner {
             position: relative;
-			padding-bottom: 70px;
-			@media(max-width: 1024.98px) {
-				.swiper-container {
-					margin-left: 35px;
-					margin-right: 35px;
-				}
-			}
+            padding-bottom: 70px;
+            @media(max-width: 1024.98px) {
+                .swiper-container {
+                    margin-left: 35px;
+                    margin-right: 35px;
+                }
+            }
         }
         .landingNews__list {
             display: flex;
