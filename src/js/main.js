@@ -374,7 +374,7 @@ function slideFeelCustom() {
         },
     })
     const hha = new Swiper('.landingProject__inner .swiper-container', {
-        slidesPerView: 3.5,
+        slidesPerView: 3.8,
         centeredSlides: true,
         loop: true,
         cssMode: true,
@@ -499,16 +499,17 @@ function ajaxContactForm() {
         const _thisBtn = $(this);
         const url = _thisBtn.attr("data-url");
         const formData = new FormData();
-        const nameText = $(".form__group.form__textare textarea").attr(
+        const nameText = $(".item__form .form__textare textarea").attr(
             "name",
         );
-        const valText = $(".form__group.form__textare textarea").val();
-        $(".form__group.form__input input").each(function() {
+        const valText = $(".item__form .form__textare textarea").val();
+        $(".item__form .form__input input").each(function() {
             const name = $(this).attr("name");
             const value = $(this).val();
             formData.append(name, value);
         });
-        formData.append(nameText, valText);
+        formData.append(nameText, valText);;
+        console.log(formData);
         if ($(".item__form form").valid() === true) {
             $.ajax({
                 url: url,
@@ -526,7 +527,7 @@ function ajaxContactForm() {
                 },
             });
         } else {
-            $(".contact__form .form-group input").addClass(
+            $(".item__form .form__input input").addClass(
                 "input-validation-error",
             );
         }

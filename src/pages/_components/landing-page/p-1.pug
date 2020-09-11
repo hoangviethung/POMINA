@@ -81,7 +81,7 @@ section.Landing-Page
 							.landingH__txt
 								.txt__inner
 									p Lớp phủ Pomina Crystal giúp bền màu và chống gỉ sét, giảm khả năng hấp thụ nhiệt tối đa, mang lại không gian mát mẻ cho mọi công trình.
-	.bg-sec-2.two-line
+	.bg-sec-4.two-line
 		.container
 			.landing__compare.scroll-item(data-scroll-id="4")
 				.compare__wrapper
@@ -167,8 +167,7 @@ section.Landing-Page
 					.swiper-button-next
 					.swiper-button-prev
 			.container-1520px.landing__project.scroll-item(data-scroll-id="9")
-				.title__custom
-					h2 dự án sử dụng tôn lạnh solar - 2 lớp cực mát
+				h2 dự án sử dụng tôn lạnh solar - 2 lớp cực mát
 		.landingProject__inner
 			.swiper-container
 				.swiper-wrapper
@@ -243,17 +242,17 @@ section.Landing-Page
 									input#contact__recaptcha(name="g-recaptcha-response" hidden)
 									.form__group
 										.form__input
-											input(type="text" placeholder="Tên*")
+											input(type="text" placeholder="Tên*" name="name")
 										.form__input
-											input(type="text" placeholder="Số điện thoại")
+											input(type="text" placeholder="Số điện thoại" name="phone")
 									.form__group
 										.form__input
-											input(type="text" placeholder="Email*")
+											input(type="text" placeholder="Email*" name="email")
 										.form__input
-											input(type="text" placeholder="Địa chỉ")
+											input(type="text" placeholder="Địa chỉ" name="location")
 									.form__group
 										.form__textare
-											textarea(name="", cols="30", rows="10",placeholder="Nội dung")
+											textarea(name="desc", cols="30", rows="10",placeholder="Nội dung")
 									.btn__send(data-url="lienhe")
 										.txt
 											h3 Liên hệ
