@@ -1,15 +1,12 @@
 section.Landing-Page {
 	position: relative;
 	.swiper-button-next {
-		right: -60px;
+		right: -40px;
 		width: 30px;
 		height: 30px;
 		border-radius: 50%;
 		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
 		background: white;
-		&.custom {
-			right: 60px;
-		}
 		&::after {
 			position: absolute;
 			width: 40px;
@@ -21,17 +18,17 @@ section.Landing-Page {
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
+		@media(max-width: 1060px) {
+			right: 0;
+		}
 	}
 	.swiper-button-prev {
-		left: -60px;
+		left: -40px;
 		width: 30px;
 		height: 30px;
 		border-radius: 50%;
 		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16px);
 		background: white;
-		&.custom {
-			left: 60px;
-		}
 		&::after {
 			position: absolute;
 			width: 40px;
@@ -46,6 +43,9 @@ section.Landing-Page {
 		@media (max-width: 575.98px) {
 			width: 30px !important;
 			height: 30px !important;
+		}
+		@media(max-width: 1060px) {
+			left: 0;
 		}
 	}
 	.bg-sec-1 {
@@ -168,6 +168,9 @@ section.Landing-Page {
 		&.custom {
 			.landingnPro__img {
 				order: 2;
+				@media (max-width:767.98px) {
+					order: -1;
+				}
 			}
 			.landingnPro__content {
 				padding-right: unset;
@@ -187,6 +190,13 @@ section.Landing-Page {
 							}
 						}
 					}
+					@media(max-width: 874px) {
+						padding: 0 20px;
+					}
+				}
+				@media (max-width:767.98px) {
+					margin-left: 0px;
+					padding: 0 10px;
 				}
 			}
 		}
@@ -481,7 +491,6 @@ section.Landing-Page {
 		margin-top: 50px;
 	}
 	.landing__item {
-		padding: 0 20px;
 		.item__inner {
 			display: block;
 			box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.42);
@@ -546,6 +555,7 @@ section.Landing-Page {
 		}
 	}
 	.landingFeel__inner {
+		margin-bottom: 80px;
 		h2 {
 			font-size: 30px;
 			color: #0F518D;
@@ -569,38 +579,41 @@ section.Landing-Page {
 		display: flex;
 		justify-content: center;
 		padding: 50px;
+		flex-wrap: wrap	;
 	}
 	.landingFeel__item {
-		-ms-flex: 0 0 30%;
-		flex: 0 0 30%;
-		max-width: 30%;
+		// -ms-flex: 0 0 30%;
+		// flex: 0 0 30%;
+		// max-width: 30%;
+		// @media(max-width: 1024.98px) {
+		// 	-ms-flex: unset;
+		// 	flex: unset;
+		// 	max-width: unset;
+		// }
 		.feel__icon {
-			width: 50%;
-			margin: auto;
-			// .icon__img {
-			// 	position: relative;
-			// }
+			margin-bottom: 10px;
 			.img {
 				position: relative;
 				z-index: 1;
-				width: 180px;
-				height: 205px;
+				width: 200px;
+				height: 230px;
 				margin-bottom: 20px;
 				overflow: hidden;
+				margin: 0 auto;
 				img {
 					position: absolute;
 					top: 50%;
 					left: 50%;
 					transform: translate(-50% , -50%);
-					width: 170px;
-					height: 195px;
+					width: 188px;
+					height: 220px;
 					clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 				}
 				&::before {
 					position: absolute;
 					content: "";
-					width: 180px;
-					height: 205px;
+					width: 200px;
+					height: 230px;
 					top: 0;
 					left: 0;
 					// top: 50%;
@@ -617,31 +630,42 @@ section.Landing-Page {
 			margin: auto;
 			text-align: center;
 			position: relative;
-			&::before {
-				content: '"';
-				position: absolute;
-				font-size: 100px;
-				top: 25px;
-				left: 15px;
-				color: #707070;
-				opacity: .1;
-				font-family: 'hel-regular';
-				transform: translate(-50%, -50%);
-			}
-			&::after {
-				content: '"';
-				position: absolute;
-				font-size: 100px;
-				top: calc(100% + 20px);
-				left: calc(100% - 15px);
-				color: #707070;
-				opacity: .1;
-				font-family: 'hel-regular';
-				transform: translate(-50%, -50%);
-			}
 			p {
 				font-family: 'hel-regular';
 				font-size: 18px;
+				quotes: "“" "”" "‘" "’";
+				padding: 0 30px;
+				 overflow: hidden;
+				display: -webkit-box;
+				text-overflow: ellipsis;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 3;
+				&::before {
+					content: open-quote;
+					position: absolute;
+					font-size: 100px;
+					top: -45px;
+					left: 0;
+					// top: 25px;
+					// left: 15px;
+					color: #707070;
+					opacity: .1;
+					font-family: 'hel-regular';
+					// transform: translate(-50%, -50%);
+				}
+				&::after {
+					content: close-quote;
+					position: absolute;
+					font-size: 100px;
+					bottom: -90px;
+					right: 0;
+					// top: calc(100% + 20px);
+					// left: calc(100% - 15px);
+					color: #707070;
+					opacity: .1;
+					font-family: 'hel-regular';
+					// transform: translate(-50%, -50%);
+				}
 			}
 		}
 	}
@@ -650,7 +674,7 @@ section.Landing-Page {
 		position: relative;
 		padding-bottom: 90px;
 		.swiper-container {
-			padding-top: 30px;
+			margin-top: 30px;
 		}
 		h2 {
 			font-size: 30px;
@@ -740,6 +764,10 @@ section.Landing-Page {
 				font-family: 'hel-regular';
 				font-size: 18px;
 				text-align: center;
+				display: -webkit-box;
+				text-overflow: ellipsis;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 5;
 			}
 		}
 	}
@@ -751,6 +779,12 @@ section.Landing-Page {
 		}
 		.swiper-slide {
 			opacity: .3;
+		}
+		.swiper-button-prev {
+			left: 40px !important;
+		}
+		.swiper-button-next {
+			right: 40px !important;
 		}
 	}
 	.landingProject__inner {
@@ -778,7 +812,8 @@ section.Landing-Page {
 	}
 	.landingnHat__body {
 		display: flex;
-		margin: 0 -45px;
+		flex-wrap: wrap;
+		margin: 0 45px;
 		padding: 50px 0;
 		.body__item {
 			-ms-flex: 0 0 50%;
@@ -799,10 +834,16 @@ section.Landing-Page {
 				width: 60%;
 				margin: auto;
 				text-align: justify;
+				overflow: hidden;
 				text-align-last: center;
 				p {
 					font-size: 17px;
 					font-family: 'hel-regular';
+					display: -webkit-box;
+					text-overflow: ellipsis;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 5;
+					
 				}
 			}
 			.item__img {
@@ -828,6 +869,13 @@ section.Landing-Page {
 					width: fit-content;
 				}
 			}
+			@media(max-width: 1034.98px) {
+				-ms-flex: 0 0 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+			margin-bottom: 20px;
+
+			}
 		}
 	}
 	.landingForm__inner {
@@ -835,6 +883,14 @@ section.Landing-Page {
 		.landingForm__list {
 			display: flex;
 			margin: 0 -30px;
+			flex-wrap: wrap;
+			@media(max-width: 1024.98px) {
+				> div {
+					-ms-flex: 0 0 100%;
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
+			}
 		}
 		.landingForm__item {
 			-ms-flex: 0 0 50%;
@@ -859,6 +915,10 @@ section.Landing-Page {
 					bottom: 0;
 				}
 			}
+		}
+		.item__map {
+			display: flex;
+			align-items: center;
 		}
 		.item__info {
 			background: linear-gradient(150deg, #a1d3ea 1%, #fff 30%, #7db2cb 90%);

@@ -136,16 +136,17 @@ section.Landing-Page
 			.container-1520px.landing__feel.scroll-item(data-scroll-id="7")
 				.landingFeel__inner
 					h2 Cảm nhận của đại lý
-					.landingFeel__list
-						-for(var i =1;i<4;i++)
-							.landingFeel__item
-								.feel__icon
-									//- .icon__img
-									//- 	img(src="./img/landing/icon-x.png", alt="calendar")
-									.img
-										img(src="./img/landing/new.png", alt="")
-								.feel__content
-									p Lorem ipsum dolor sit amet, consectetuer elit adipiscing elit. Lorem ipsum dolor sit.
+					.swiper-container
+						.swiper-wrapper
+							-for(var i =1;i<4;i++)
+								.landingFeel__item.swiper-slide
+									.feel__icon
+										//- .icon__img
+										//- 	img(src="./img/landing/icon-x.png", alt="calendar")
+										.img
+											img(src="./img/landing/new.png", alt="")
+									.feel__content
+										p Lorem ipsum dolor sit amet, consectetuer elit adipiscing elit. Lorem ipsum dolor sit.
 			.container-1520px.landing__feelCustom.scroll-item(data-scroll-id="8")
 				.landingFCustom__inner
 					h2 cảm nhận của khách hàng
