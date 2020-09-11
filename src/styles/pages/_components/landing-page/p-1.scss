@@ -326,11 +326,13 @@
                 }
                 p {
                     font-family: 'hel-regular';
-                    font-size: 12px;
                     span {
                         font-family: 'hel-bold';
                         color: #1D6D7F;
-                    }
+					}
+					@media(max-width:1024.98px) {
+						font-size: 12px;
+					}
                 }
             }
             @media(max-width: 767.98px) {
@@ -648,7 +650,7 @@
         .landingNews__inner {
             position: relative;
 			padding-bottom: 70px;
-			@media(max-width: 768px) {
+			@media(max-width: 1024.98px) {
 				.swiper-container {
 					margin-left: 35px;
 					margin-right: 35px;
@@ -967,10 +969,10 @@
                 opacity: .3;
             }
             .swiper-button-prev {
-                left: 40px !important;
+                left: 10px !important;
             }
             .swiper-button-next {
-                right: 40px !important;
+                right: 10px !important;
             }
         }
         .landingProject__inner {
@@ -1227,6 +1229,7 @@
 		}
 		.menu-fixed {
 			bottom: 70px;
+			cursor: pointer;
 			display: flex;
 			opacity: 1;
 			overflow: hidden;
@@ -1264,13 +1267,15 @@
 				top: 50%;
 				transform: translateY(-50%);
 				width: 80px;
+				
 				a {
-					height: 80px;
 					opacity: 0;
+					height: 0;
 					pointer-events: none;
 				}
 				
 				.mobile-tool {
+					cursor: pointer;
 					margin-bottom: 10px;
 					background: rgba($color: #124E91, $alpha: .5);
 					border-radius: 50px;
@@ -1288,6 +1293,7 @@
 				
 					&.show {
 						~ a {
+							height: 80px;
 							opacity: 1;
 							pointer-events: all;
 						}

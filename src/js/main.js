@@ -357,6 +357,9 @@ function slideFeelCustom() {
         spaceBetween: 20,
         speed: 1000,
         breakpoints: {
+			1025: {
+                slidesPerView: 2
+            },
             768: {
                 slidesPerView: 1,
             },
@@ -378,6 +381,9 @@ function slideFeelCustom() {
         spaceBetween: 20,
         speed: 1000,
         breakpoints: {
+			1025: {
+                slidesPerView: 2
+            },
             768: {
                 slidesPerView: 1,
             },
@@ -467,7 +473,7 @@ const talkingNews = () => {
         slidesPerView: 3,
         breakpoints: {
             1025: {
-                slidesPerView: 3
+                slidesPerView: 2
             },
             768: {
                 slidesPerView: 1
@@ -495,10 +501,10 @@ const swiperFeel = () => {
         },
         breakpoints: {
             1025: {
-                slidesPerView: 3
+                slidesPerView: 2
             },
             768: {
-                slidesPerView: 2
+                slidesPerView: 1
             },
             480: {
                 slidesPerView: 1,
