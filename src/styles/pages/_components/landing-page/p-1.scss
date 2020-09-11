@@ -899,9 +899,15 @@
                     -ms-flex: 0 0 100%;
                     flex: 0 0 100%;
                     max-width: 100%;
-                    margin-bottom: 20px;
-                }
-            }
+					margin-bottom: 20px;
+					padding: 0;
+					
+				}
+			}
+			@media(max-width: 1034.98px) {
+				margin: 0;
+				margin-left: 45px !important;
+			}
         }
         .landingForm__inner {
             padding: 50px 0;
@@ -1053,5 +1059,36 @@
                 font-size: 17px;
                 color: white;
             }
-        }
+		}
+		.menu-fixed {
+			bottom: 130px;
+			display: flex;
+			opacity: 1;
+			overflow: hidden;
+			position: fixed;
+			right: 30px;
+			width: 55px;
+			z-index: 999;
+			flex-direction: column;
+		
+			a {
+				margin-bottom: 10px;
+				background: #124E91;
+				border: 2px solid #98c6ea;
+				border-radius: 50px;
+				height: 55px;
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+				display: flex;
+			}
+			img {
+				width: 30px;
+				height: 25px;
+			}
+			@media(max-width:575.98px)  {
+				bottom: 0;
+				right: 0;
+			}
+		}
     }
