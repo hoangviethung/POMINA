@@ -7,6 +7,13 @@ header {
     height: 226px;
     z-index: 100;
     &.custom {
+        .nav-list {
+            top: 40px;
+        }
+        .logo {
+            opacity: 1;
+        }
+        height: 147px;
         background-image: url(../img/landing/bg-header.png);
         &[language='en'] {
             background-image: url(../img/landing/bg-header.png);
