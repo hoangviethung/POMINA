@@ -413,28 +413,6 @@ function scrollToSection() {
         $('#overlay').removeClass('active');
         $('body').removeClass('disabled');
     });
-
-    const activeSectionWhenScroll = () => {
-        $('[data-scroll-id]').each(function() {
-            if (
-                this.getBoundingClientRect().top < 2 * $('header').height() &&
-                this.getBoundingClientRect().top > 0
-            ) {
-                const toId = $(this).attr('data-scroll-id');
-                $(`header [data-scroll-to]`).removeClass('active');
-                $(`header [data-scroll-to="${toId}"]`).addClass('active');
-                // if (toId == '1') {
-                // 	sliderMenu().update();
-                // }
-                // sliderMenu().slideTo(Number(toId) - 1);
-            }
-        });
-    };
-
-    activeSectionWhenScroll();
-    $(window).on('scroll', function() {
-        activeSectionWhenScroll();
-    });
 };
 
 function countDownSale() {
@@ -599,6 +577,7 @@ $(document).ready(function() {
     talkingNews();
     swiperFeel();
     toggleMobileNav();
+    ajaxContactForm();
     // TAB
     const tabGoogleMap = new Tab('.google-map .tab-container');
     const tabProductDetail = new Tab('.tab-information .tab-container');
