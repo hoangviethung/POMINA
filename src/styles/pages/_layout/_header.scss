@@ -8,7 +8,10 @@ header {
     z-index: 100;
     &.custom {
         .nav-list {
-            top: 32px;
+            top: 40px;
+        }
+        .logo {
+            opacity: 1;
         }
         height: 147px;
         background-image: url(../img/landing/bg-header.png);
