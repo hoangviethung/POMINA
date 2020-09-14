@@ -1,5 +1,6 @@
 header {
-    position: relative;
+	position: fixed;
+	top: 0;
     width: 100%;
     // background-image: url(../img/bg-header.png);
     // background-size: cover;
@@ -52,9 +53,9 @@ header {
         }
         height: 147px;
         background-image: url(../img/landing/bg-header.png);
-        &[language='en'] {
-            background-image: url(../img/landing/bg-header.png);
-        }
+        // &[language='en'] {
+        //     background-image: url(../img/landing/bg-header.png);
+        // }
         @media (max-width: 1024.98px) {
             .logo-mobile {
                 left: 55%;
@@ -142,9 +143,9 @@ header {
             }
         }
     }
-    &[language='en'] {
-        background-image: url(../img/bg-header-en.png);
-    }
+    // &[language='en'] {
+    //     background-image: url(../img/bg-header-en.png);
+    // }
     .logo {
         cursor: pointer;
         position: absolute;
