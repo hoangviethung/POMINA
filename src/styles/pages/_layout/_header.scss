@@ -1,12 +1,40 @@
 header {
     position: relative;
     width: 100%;
-    background-image: url(../img/bg-header.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    // background-image: url(../img/bg-header.png);
+    // background-size: cover;
+    // background-repeat: no-repeat;
     height: 226px;
     z-index: 100;
     &.custom {
+        position: fixed;
+        top: 0;
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url(../img/landing/bg-header.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: -1;
+            @media (max-width: 1024.98px) {
+                content: none;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            background: white;
+            width: 100%;
+            height: 130%;
+            top: 0;
+            z-index: -1;
+            @media (max-width: 1024.98px) {
+                content: none;
+            }
+        }
         .nav-item {
             >h3 {
                 font-family: 'hel-regular';
@@ -19,6 +47,8 @@ header {
         }
         .logo {
             opacity: 1;
+            top: 105px;
+            left: 50px;
         }
         height: 147px;
         background-image: url(../img/landing/bg-header.png);
@@ -27,7 +57,7 @@ header {
         }
         @media (max-width: 1024.98px) {
             .logo-mobile {
-                left: 58%;
+                left: 55%;
             }
         }
         @media (max-width: 1024.98px) {
