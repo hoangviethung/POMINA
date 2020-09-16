@@ -24,18 +24,18 @@ header {
                 content: none;
             }
         }
-        &::before {
-            content: '';
-            position: absolute;
-            // background: white;
-            width: 100%;
-            height: 130%;
-            top: 0;
-            z-index: -1;
-            @media (max-width: 1024.98px) {
-                content: none;
-            }
-        }
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     // background: white;
+        //     width: 100%;
+        //     height: 130%;
+        //     top: 0;
+        //     z-index: -1;
+        //     @media (max-width: 1024.98px) {
+        //         content: none;
+        //     }
+        // }
         .nav-item {
             >h3 {
                 font-family: 'hel-regular';
