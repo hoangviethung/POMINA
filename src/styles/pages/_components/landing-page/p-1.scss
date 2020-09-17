@@ -1642,6 +1642,7 @@ section.Landing-Page {
     top: 0;
     background: linear-gradient(180deg, #D9F0FF, #FFFFFF, #e0f3ff00);
     z-index: 90;
+    pointer-events: none;
     @media(max-width: 1024.98px) {
         height: 130px;
     }
