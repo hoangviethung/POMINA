@@ -544,10 +544,6 @@ function ajaxContactForm() {
                     _thisBtn.removeAttr("disabled");
                 },
             });
-        } else {
-            $(".item__form .form__input input").addClass(
-                "input-validation-error",
-            );
         }
     });
 }
