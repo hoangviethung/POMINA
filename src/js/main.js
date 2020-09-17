@@ -525,26 +525,26 @@ function ajaxContactForm() {
             const name = $(this).attr("name");
             const value = $(this).val();
             formData.append(name, value);
+            console.log(formData);
         });
-        formData.append(nameText, valText);;
-        console.log(formData);
-        if ($(".item__form form").valid() === true) {
-            $.ajax({
-                url: url,
-                type: "post",
-                data: formData,
-                processData: false,
-                contentType: false,
-                beforeSend: function() {
-                    _thisBtn.attr("disabled", "disabled");
-                },
-                success: function(res) {
-                    alert(`${res.Message}`);
-                    window.location.reload();
-                    _thisBtn.removeAttr("disabled");
-                },
-            });
-        }
+        formData.append(nameText, valText);
+        // if ($(".item__form form").valid() == true) {
+        $.ajax({
+            url: url,
+            type: "post",
+            data: formData,
+            processData: false,
+            contentType: false,
+            beforeSend: function() {
+                _thisBtn.attr("disabled", "disabled");
+            },
+            success: function(res) {
+                alert(`${res.Message}`);
+                window.location.reload();
+                _thisBtn.removeAttr("disabled");
+            },
+        });
+        // }
     });
 }
 const toggleMobileNav = () => {
@@ -554,6 +554,44 @@ const toggleMobileNav = () => {
         })
     }
 }
+
+const ajaxFormResearch = () => {
+    $('.btn.btn-subResearch button').on('click', function(e) {
+        e.preventDefault();
+        const _thisBtn = $(this);
+        const url = _thisBtn.attr('data-url');
+        const formData = new FormData();
+        const nameText = $(
+            '.research__login--form form .form-group textarea'
+        ).attr('name');
+        const valText = $(
+            '.research__login--form form .form-group textarea'
+        ).val();
+        $('.research__login--form form .form-group input').each(function() {
+            const name = $(this).attr('name');
+            const value = $(this).val();
+            formData.append(name, value);
+        });
+        formData.append(nameText, valText);
+        if ($('.research__login--form form').valid() === true) {
+            $.ajax({
+                url: url,
+                type: 'post',
+                data: formData,
+                processData: false,
+                contentType: false,
+                beforeSend: function() {
+                    _thisBtn.attr('disabled', 'disabled');
+                },
+                success: function(res) {
+                    alert(`${res.Message}`);
+                    window.location.reload();
+                    _thisBtn.removeAttr('disabled');
+                },
+            });
+        }
+    });
+};
 
 $(document).ready(function() {
     // GOOGLE MAP
@@ -593,6 +631,7 @@ $(document).ready(function() {
     swiperFeel();
     toggleMobileNav();
     ajaxContactForm();
+    ajaxFormResearch();
     // TAB
     const tabGoogleMap = new Tab('.google-map .tab-container');
     const tabProductDetail = new Tab('.tab-information .tab-container');
