@@ -420,7 +420,10 @@ section.Landing-Page {
     }
     .landingH__inner {
         position: relative;
-        // overflow-x: hidden;
+        padding-top: 50px;
+        @media(max-width: 930.98px) {
+            padding-top: 0px;
+        }
         &::before {
             position: absolute;
             top: -19%;
